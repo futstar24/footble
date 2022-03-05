@@ -62,8 +62,6 @@ playerAnswers["3/3/2022"] = "Olivier Giroud"
 playerAnswers["3/4/2022"] = "Marquinhos"
 playerAnswers["3/5/2022"] = "Cristiano Ronaldo"
 
-console.log(playerAnswers)
-
 var randomPlayer = ""
 const today = new Date()
 //const date = today.getMinutes()
