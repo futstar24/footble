@@ -61,6 +61,7 @@ playerAnswers["3/9/2022"] = "Paulo Dybala"
 playerAnswers["3/10/2022"] = "Joao Cancelo"
 playerAnswers["3/11/2022"] = "Olivier Giroud"
 playerAnswers["3/12/2022"] = "Marquinhos"
+playerAnswers["3/13/2022"] = "Kyle Walker"
 
 
 var randomPlayer = ""
