@@ -60,7 +60,7 @@ playerAnswers["3/1/2022"] = "Paulo Dybala"
 playerAnswers["3/2/2022"] = "Joao Cancelo"
 playerAnswers["3/3/2022"] = "Olivier Giroud"
 playerAnswers["3/4/2022"] = "Marquinhos"
-playerAnswers["3/5/2022"] = "Cristiano Ronaldo"
+playerAnswers["3/5/2022"] = "Mohammed Salah"
 
 var randomPlayer = ""
 const today = new Date()
