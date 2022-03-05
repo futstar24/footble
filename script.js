@@ -44,7 +44,7 @@ if (localStorage.getItem("player5") == null) {
 if (localStorage.getItem("player6") == null) {
   localStorage.setItem("player6","Player 6")
 }
-//reset()
+reset()
 document.getElementById("player1").innerHTML = localStorage.getItem("player1")
 document.getElementById("player2").innerHTML = localStorage.getItem("player2")
 document.getElementById("player3").innerHTML = localStorage.getItem("player3")
