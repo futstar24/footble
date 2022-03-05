@@ -1,0 +1,331 @@
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+  
+  @media screen and (max-width:400px) {
+    #inputBox {
+      font-size: 4vw;
+      width: 40vw;
+    }
+    #guessButton {
+      width: 15vw;
+    }
+    .rect {
+      width: 14vw;
+      height: 14vw;
+      border-radius: 2vw;
+    }
+  
+    #mainTableTD {
+      font-size:3vw;
+    }
+  
+    #guessButton {
+      height: 4vh;
+      font-size: 3vw;
+    }
+  
+    #guessPlayer {
+      font-size: 4vw;
+    }
+  
+    #title {
+      font-size: 7vw;
+    }
+    #boxText {
+      font-size:2vw;
+    }
+    input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+  
+    .popup {
+      width: 60vw;
+      height: 17vh;
+      top: 30%;
+      left: 50%;
+      margin-left: -30vw;
+      margin-top: -15vh;
+    }
+  
+    #popupElement {
+      width: 60vw;
+      height: 15vw;
+    }
+  
+    #mainDiv {
+      width: 100%;
+    }
+  
+    th {
+      font-size:2.6vw;
+    }
+    #mainTableTD {
+      padding: 1vw;
+    }
+  
+    #mainTable {
+      width: 100%;
+    }
+  
+    .playerLabel {
+      font-size: 2.5vw;
+    }
+    .horizontalDiv {
+      width: 100%;
+    }
+    
+  }
+  
+  
+  @media screen and (min-width:400px) {
+    title {
+      font-size: 4vw;
+    }
+    .popup {
+      width: 50vw;
+      height: 30vw;
+      top: 50%;
+      left: 50%;
+      margin-left: -25vw;
+      margin-top: -15vw;
+    }
+    #popupElement {
+      width: 50vw;
+      height: 15vw;
+    }
+    #guessButton {
+      height: 8vh;
+      font-size: 4vw;
+    }
+    #boxText {
+      font-size:1vw;
+    }
+    #mainDiv {
+      width: 50%;
+      left: 25%;
+    }
+    #guessButton {
+      width: 30%;
+      font-size: 2vw;
+      height: 3vw;
+      margin-left: -5vw;
+    }
+    #guessPlayer {
+      font-size: 2vw;
+      width: 100%;
+    }
+    
+    th {
+      font-size:1.5vw;
+    }
+    #mainTableTD {
+      padding: 0.2vw;
+    }
+    #mainTable {
+      margin-top: -20px;
+      width: 100%;
+    }
+    .playerLabel {
+      font-size: 1.7vw;
+    }
+    .rect {
+      width: 6vw;
+      height: 6vw;
+      border-radius: 1vw;
+    }
+    #inputBox {
+      font-size: 2vw;
+    }
+    .horizontalDiv {
+      width: 120%;
+      margin-left: -9vw;
+    }
+  }
+  
+  body, html {
+    overflow: hidden
+  }
+  
+  .popup {
+    top: 0vh;
+  }
+  
+  @keyframes drop {
+    0%{opacity: 0}
+    70%{
+      transform: translateY(60vh)
+    }
+    100%{
+      transform: translateY(50vh);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hide {
+    0%{
+      transform: translateY(50vh);
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-30vh);
+      opacity: 0;
+    }
+  }
+  
+  #winLoseTitle {
+    text-align: center;
+    font-size: 10vw;
+    font-family: "Arial";
+    margin:0px;
+  }
+  
+  #revealwin {
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Arial";
+    vertical-align: top;
+    margin:0px;
+  }
+  
+  #reveallose {
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Arial";
+    vertical-align: top;
+    margin:0px;
+  }
+  
+  #popupTable {
+    table-layout: fixed;
+  }
+  
+  #win {
+    background-color: green;
+    visibility: hidden;
+  }
+  #lose {
+    background-color: red;
+    visibility: hidden;
+  }
+  
+  .popup {
+    z-index: 1;
+    position: fixed;
+    border-radius: 2vw;
+  }
+  
+  #mainDiv {
+    position: absolute;
+    height: 100%;
+  }
+  
+  #title {
+    text-align: center;
+    font-family: "Arial";
+  }
+  
+  #mainTable {
+    margin-left: -2vw;
+    table-layout: fixed;
+    font-family: "Arial";
+  }
+  
+  #guessPlayer {
+    text-align: center;
+    font-family: "Arial";
+    padding: 1vw;
+   
+  }
+  
+  input::-webkit-list-button {
+    opacity: 0;
+  }
+  input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  
+  
+  #inputBox {
+    -webkit-appearance: none;
+    /*webkit browsers */
+    -moz-appearance: none;
+    /*Firefox */
+    appearance: none;
+  }
+  
+  
+  
+  .horizontalDiv {
+    display: table-cell;
+    direction: horizontal;
+    margin-bottom: 2vw;
+  }
+  
+  .rect {
+    background-color: white;
+    border: 1px solid black;
+    margin: auto;
+    display: table;
+  }
+  
+  @keyframes rotateBox {
+    0% {
+      transform: rotateX(0.5turn)
+    }
+  }
+  
+  #teamLabel {
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: "Arial";
+  }
+  
+  #countryLabel {
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: "Arial";
+  }
+  
+  #numberLabel {
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: "Arial";
+  }
+  
+  #ratingLabel {
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: "Arial";
+  }
+  
+  #positionLabel {
+    display: table-cell;
+    vertical-align: bottom;
+    font-family: "Arial";
+  }
+  
+  .playerLabel {
+    text-align: center;
+    vertical-align: center;
+  }
+  
+  #boxText {
+    font-family: Arial;
+    text-align: center;
+    width: 80%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  
+  #screen {
+    width:100%;
+    height: 100%;
+    position: fixed;
+  }
+  
