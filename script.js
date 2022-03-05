@@ -53,14 +53,15 @@ document.getElementById("player5").innerHTML = localStorage.getItem("player5")
 document.getElementById("player6").innerHTML = localStorage.getItem("player6")
 
 const playerAnswers = {}
-playerAnswers["2/26/2022"] = "Harry Kane"
-playerAnswers["2/27/2022"] = "Virgil Van Dijk"
-playerAnswers["2/28/2022"] = "Lionel Messi"
-playerAnswers["3/1/2022"] = "Paulo Dybala"
-playerAnswers["3/2/2022"] = "Joao Cancelo"
-playerAnswers["3/3/2022"] = "Olivier Giroud"
-playerAnswers["3/4/2022"] = "Marquinhos"
 playerAnswers["3/5/2022"] = "Mohammed Salah"
+playerAnswers["3/6/2022"] = "Harry Kane"
+playerAnswers["3/7/2022"] = "Virgil Van Dijk"
+playerAnswers["3/8/2022"] = "Lionel Messi"
+playerAnswers["3/9/2022"] = "Paulo Dybala"
+playerAnswers["3/10/2022"] = "Joao Cancelo"
+playerAnswers["3/11/2022"] = "Olivier Giroud"
+playerAnswers["3/12/2022"] = "Marquinhos"
+
 
 var randomPlayer = ""
 const today = new Date()
