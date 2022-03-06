@@ -113,7 +113,7 @@ function createBoxes(rectName) {
 
 
 
-
+console.log(document.body.style.height)
 resetAtMidnight()
 
 function resetAtMidnight() {
@@ -222,17 +222,21 @@ function showWinOrLose(popup) {
 
 var finished = true
 
+document.body.style.height = "auto"
 const helpDiv = document.getElementById("helpDiv")
+helpDiv.parentNode.removeChild(helpDiv)
 var helpOpen = false;
 document.getElementById("help").className="fa-regular fa-circle-question"
 document.getElementById("iconDiv").addEventListener("click",function(){
   if (helpOpen) {
+    helpDiv.parentNode.removeChild(helpDiv)
     document.getElementById("help").className="fa-regular fa-circle-question"
     document.body.style.backgroundColor = "white"
     document.getElementById("license").style.color = "black"
     helpOpen = false
     helpDiv.style.visibility = "hidden"
   } else {
+    document.body.appendChild(helpDiv)
     document.getElementById("help").className="fa-solid fa-x"
     document.body.style.backgroundColor = "rgb(68, 68, 68)"
     document.getElementById("license").style.color = "white"
@@ -603,3 +607,4 @@ function determineLeague() {
     }
   }
 }
+
