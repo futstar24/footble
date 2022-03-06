@@ -522,7 +522,7 @@
   background-color: rgb(68, 68, 68);
   z-index: 2;
   margin-top:-2vh;
-  height:120%;
+  height:auto;
   visibility: hidden;
 }
 #iconDiv {
