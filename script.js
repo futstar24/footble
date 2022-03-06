@@ -229,7 +229,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     helpOpen = false
     helpDiv.style.visibility = "hidden"
   } else {
-    disableScroll()
+    //disableScroll()
     document.getElementById("help").className="fa-solid fa-x"
     helpOpen = true
     helpDiv.style.visibility = "visible"

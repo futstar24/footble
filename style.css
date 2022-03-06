@@ -27,9 +27,9 @@
     visibility: hidden;
   }
   #iconDiv {
-    position: absolute;
+    position: fixed;
     top:2%;
-    left: 3%;
+    left: 1vw;
     margin: 0px;
     padding: 0px;
     width: auto;
@@ -38,6 +38,7 @@
   
   #help {
     font-size: 10vw;
+    position: fixed;
   }
   #winLoseTitle {
     font-size: 10vw;
@@ -147,8 +148,8 @@
     visibility: hidden;
   }
    #iconDiv {
-    position: absolute;
-    left: 3%;
+    position: fixed;
+    left: 1vw;
     margin: 0px;
     padding: 0px;
     width: auto;
@@ -156,6 +157,7 @@
   
   #help {
     font-size: 10vw;
+    position: fixed;
   }
   #winLoseTitle {
     font-size: 10vw;
@@ -252,8 +254,8 @@
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 1200px) {
    #iconDiv {
-    position: absolute;
-    left: 1%;
+    position: fixed;
+    left: 25vw;
     margin: 0px;
     padding: 0px;
     z-index: 3;
@@ -262,6 +264,7 @@
   
   #help {
     font-size: 6vw;
+    position: fixed;
   }
   #title {
     font-size: 4vw;
@@ -459,7 +462,7 @@
 .horizontalDiv {
   display: table-cell;
   direction: horizontal;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .rect {
@@ -551,7 +554,9 @@
   position: relative;
   width: 163px;
   margin: auto;
+  margin-bottom: 0px;
 }
 #license {
+  margin-top: 0px;
   text-align: center;
 }
