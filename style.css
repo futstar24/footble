@@ -4,16 +4,26 @@
 }
 
 
-@media only screen and (max-width: 599px) {
-  
+@media only screen and (max-width: 750px) {
+  .helpBottom {
+    font-size: 8vw;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
   .helpText {
-    font-size: 2vh;
-    margin-top: 4vh;
+    font-size: 5vw;
+    margin-top: 30px;
+  }
+
+  .helpTitle {
+    font-size: 8vw;
+    margin-bottom: 0px;
+    margin-top: 40px;
   }
   
   #helpDiv {
     width: 102vw;
-    margin-left:-2vw;
+    margin-left:-10px;
   }
 
   .popup {
@@ -22,8 +32,8 @@
   }
     
   #iconDiv {
-    top:2%;
-    left: 3%;
+    top: 10px;
+    left: 5vw;
   }
   
   #help {
@@ -46,7 +56,7 @@
 
   #mainTableTD {
     font-size:3vw;
-    padding: 1vw;
+    padding: 0.5vw;
   }
 
   #title {
@@ -63,7 +73,8 @@
 
   #popupElement {
     width: 60%;
-    padding-top: 4%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   #mainDiv {
@@ -84,170 +95,10 @@
   }
 }
  
-/* Small screen devices (600px and above) */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
-  .helpTitle {
-    font-size: 10vw;
-  }
-  .helpBottom {
-    font-size: 10vw;
-  }
-  
-  .helpText {
-    font-size: 4vw;
-  }
-  #helpDiv {
-    width: 102vw;
-    margin-left:-2vw;
-  }
 
-  .popup {
-    width: 60vw;
-    margin-left: -30vw;
-  }
-    
-  #iconDiv {
-    top:2%;
-    left: 3%;
-  }
-  
-  #help {
-    font-size: 10vw;
-  }
-  #winLoseTitle {
-    font-size: 10vw;
-  }
-  #revealwin {
-    font-size: 4vw;
-  }
-  #reveallose {
-    font-size: 4vw;
-  }
-  .rect {
-    width: 14vw;
-    height: 14vw;
-    border-radius: 2vw;
-  }
-
-  #mainTableTD {
-    font-size:3vw;
-    padding: 1vw;
-  }
-
-  #title {
-    font-size: 9vw;
-  }
-  #boxText {
-    font-size:2vw;
-  }
-
-
-  #popupRow {
-    height: 10%;
-  }
-
-  #popupElement {
-    width: 60%;
-    padding-top: 4%;
-  }
-
-  #mainDiv {
-    width: 100%;
-  }
-
-  th {
-    font-size:2.6vw;
-  }
-
-  #mainTable {
-    width: 95%;
-    padding-left: 2.5%;
-  }
-
-  .playerLabel {
-    font-size: 2.5vw;
-  }
-}
-
-/* Medium screen devices (768px and above) */
-@media only screen and (min-width: 768px) {
-  .helpText {
-    font-size: 4vw;
-  }
-  #helpDiv {
-    width: 102vw;
-    margin-left:-2vw;
-  }
-
-  .popup {
-    width: 60vw;
-    margin-left: -30vw;
-  }
-    
-  #iconDiv {
-    top:2%;
-  }
-  
-  #help {
-    font-size: 10vw;
-  }
-  #winLoseTitle {
-    font-size: 10vw;
-  }
-  #revealwin {
-    font-size: 4vw;
-  }
-  #reveallose {
-    font-size: 4vw;
-  }
-  .rect {
-    width: 14vw;
-    height: 14vw;
-    border-radius: 2vw;
-  }
-
-  #mainTableTD {
-    font-size:3vw;
-    padding: 1vw;
-  }
-
-  #title {
-    font-size: 9vw;
-  }
-  #boxText {
-    font-size:2vw;
-  }
-
-
-  #popupRow {
-    height: 10%;
-  }
-
-  #popupElement {
-    width: 60%;
-    padding-top: 4%;
-  }
-
-  #mainDiv {
-    width: 100%;
-  }
-
-  th {
-    font-size:2.6vw;
-  }
-
-  #mainTable {
-    width: 95%;
-    padding-left: 2.5%;
-  }
-
-  .playerLabel {
-    font-size: 2.5vw;
-  }
-}
  
 /* Extra big screen devices (1200px and above) */
-@media only screen and (min-width: 899px) {
+@media only screen and (min-width: 751px) {
   
   #help {
     font-size: 6vw;
@@ -256,10 +107,12 @@
     font-size: 4vw;
   }
   #popupRow {
-    height: 12.5vh;
+    height: 10%;
   }
   #popupElement {
-    width: 30vw;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .popup {
     width: 30vw;
@@ -270,14 +123,19 @@
   }
   #mainDiv {
     width: 50vw;
-    margin-left: 27vw;
+    margin-left: 25vw;
+  }
+
+  #iconDiv {
+    top: 5px;
+    left: 1.5vw;
   }
   
   th {
     font-size:1.5vw;
   }
   #mainTableTD {
-    padding: 0.1vw;
+    padding: 1vw;
   }
   #mainTable {
     width: 100%;
@@ -300,16 +158,26 @@
   #winLoseTitle {
     font-size: 5vw;
   }
+  .helpBottom {
+    font-size: 4vw;
+    padding-bottom: 5vh;
+    margin-top: 40px;
+  }
+  .helpText {
+    font-size: 2vw;
+    margin-top: 30px;
+  }
 
+  .helpTitle {
+    font-size: 4vw;
+    margin-bottom: 0px;
+    margin-top: 40px;
+  }
+  
   #helpDiv {
     width: 55vw;
     left:50%;
     margin-left:-27.5vw;
-  }
-
-  .helpText {
-    font-size: 2vw;
-    margin-top: 1vw;
   }
 
   #guessButton {
@@ -406,7 +274,6 @@
 }
 
 #mainTable {
-  margin-left: -2vw;
   table-layout: fixed;
   font-family: "Arial";
 }
@@ -481,27 +348,20 @@
   color: rgb(172, 168, 168);
   font-family: "Arial";
   margin-bottom: 0px;
-  margin-left: 2vw;
-  margin-right: 2vw;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .helpTitle {
   color: rgb(172, 168, 168);
   font-family: "Arial";
   text-align: center;
-  margin-bottom: 0px;
-  margin-top: 6vh;
-  font-size: 6vw;
 }
 
 .helpBottom {
   color: rgb(172, 168, 168);
   font-family: "Arial";
   text-align: center;
-  margin:0px;
-  margin-top: 1vw;
-  font-size: 6vw;
-  padding: bottom 1.2vh;
 }
 #linkDiv {
   position: relative;
@@ -519,14 +379,13 @@
   position: absolute;
   background-color: rgb(68, 68, 68);
   z-index: 2;
-  margin-top:-2vh;
-  height:102%;
+  margin-top:-20px;
+  height:auto;
   visibility: hidden;
+  text-align: center;
 }
 #iconDiv {
   position: absolute;
-  margin-left: 1vw;
-  margin-top: 2.6vh;
   z-index: 3;
   width: auto;
 }
