@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Footble</title>
+  <script src="https://kit.fontawesome.com/852e8ba5fd.js" crossorigin="anonymous"></script>
 	<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -12,6 +13,9 @@
 	<script src="players.js"></script>
   <div id = "screen"></div>
 	<div id="mainDiv">
+    <div id = "iconDiv">
+        <i id = "help"></i>
+    </div>
 		<h1 id="title">FOOTBLE</h1>
 		<table id="mainTable">
 			<tr>
@@ -147,12 +151,10 @@
         </datalist>
       <button id="guessButton">Guess</button>
     </div>
-  </div>
-  
     <div class = "popup" id = "win">
       <table id = "popupTable">
-        <tr><td id = "popupElement"><p id = "winLoseTitle">You Win!</p></td></tr>
-        <tr><td id = "popupElement"><p id = "revealwin">h</p></td></tr>
+        <tr id = "popupRow"><td id = "popupElement"><p id = "winLoseTitle">You Win!</p></td></tr>
+        <tr id = "popupRow"><td id = "popupElement"><p id = "revealwin">h</p></td></tr>
       </table>
     </div>
     
@@ -162,6 +164,24 @@
         <tr><td id = "popupElement"><p id = "reveallose">h</p></td></tr>
       </table>
     </div>
+
+	<div id = "helpDiv">
+		<p class = "helpTitle">Help</p>
+		<p class = "helpText">You have 6 guesses to figure out the Daily Footble.</p>
+		<p class = "helpText">Each player guessed must be a valid football player contained in the list.</p>
+		<p class = "helpText">The list can be accessed by clicking the dropdown arrow in the guess box.</p>
+		<p class = "helpText">Auto-complete is provided and must be used, as players must be inputted exactly how they appoear in the list.</p>
+		<p class = "helpText">To guess, press the guess button after a player was selected.</p>
+		<p class = "helpText">After your guess is made, it will be evaluated compared to the daily secret player.</p>
+		<p class = "helpText">A key for what each box color means is written within the box.</p>
+		<p class = "helpText">Every day, there will be a new Footble.</p>
+    <p class = "helpBottom">Good Luck!</p>
+  
+	</div>
+ <div id = "linkDiv"><a href="https://twitter.com/MCFCjack24?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @MCFCjack24</a></div><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+   
+   
   <script src="script.js"></script>
   </body>
 </html>

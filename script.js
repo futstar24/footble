@@ -66,7 +66,6 @@ playerAnswers["3/13/2022"] = "Kyle Walker"
 
 var randomPlayer = ""
 const today = new Date()
-//const date = today.getMinutes()
 const date = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear()
 var randomPlayerName = playerAnswers[date]
 console.log(randomPlayerName)
@@ -125,7 +124,6 @@ function resetAtMidnight() {
     night.setMinutes(0)
     night.setSeconds(0)
     night.setMilliseconds(0)
-    //night.setSeconds(new Date().getSeconds()+10)
     console.log(night.getTime())
     console.log(now.getTime())
     var msToMidnight = night.getTime() - now.getTime();
@@ -220,6 +218,24 @@ function showWinOrLose(popup) {
 
 var finished = true
 
+enableScroll()
+const helpDiv = document.getElementById("helpDiv")
+var helpOpen = false;
+document.getElementById("help").className="fa-regular fa-circle-question"
+document.getElementById("iconDiv").addEventListener("click",function(){
+  if (helpOpen) {
+    enableScroll()
+    document.getElementById("help").className="fa-regular fa-circle-question"
+    helpOpen = false
+    helpDiv.style.visibility = "hidden"
+  } else {
+    disableScroll()
+    document.getElementById("help").className="fa-solid fa-x"
+    helpOpen = true
+    helpDiv.style.visibility = "visible"
+  }
+})
+
 guessButton.addEventListener("click",function() {
   window.scroll({
     top: 0, 
@@ -265,6 +281,8 @@ guessButton.addEventListener("click",function() {
         finished = true
         alert("That player is not found in our list.")
       }
+    } else {
+      alert("You have already played for today.")
     }
   }
 })
@@ -579,4 +597,44 @@ function determineLeague() {
       randomPlayer.league = "serieA";
     }
   }
+}
+
+var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
