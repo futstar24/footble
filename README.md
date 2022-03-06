@@ -1,10 +1,10 @@
 # footble
-My Project is named Footble
+My Project is named Footble.
 Footble is a web app that is a modded version of wordle.
 Rather than guessing 5 letter words, a user guesses soccer players.
 Instead of judging the letters of the player guessed, I judge the soccer players stats.
 I used html, css, and java to create this project to be able to put in on the web.
-Use the project by going to www.footble-game.com
+Use the project by going to www.footble-game.com.
 Credits:
 James Dibenedetto
 Brandon Berkoff
