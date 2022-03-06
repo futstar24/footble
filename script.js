@@ -193,6 +193,10 @@ function saveBoxes(rectName) {
   }
 }
 
+document.body.addEventListener("click", function (evt) {
+  console.log(evt.target)
+})
+
 function showWinOrLose(popup) {
   element = document.getElementById(popup)
   element.style.visibility = "visible";
@@ -218,19 +222,20 @@ function showWinOrLose(popup) {
 
 var finished = true
 
-enableScroll()
 const helpDiv = document.getElementById("helpDiv")
 var helpOpen = false;
 document.getElementById("help").className="fa-regular fa-circle-question"
 document.getElementById("iconDiv").addEventListener("click",function(){
   if (helpOpen) {
-    enableScroll()
     document.getElementById("help").className="fa-regular fa-circle-question"
+    document.body.style.backgroundColor = "white"
+    document.getElementById("license").style.color = "black"
     helpOpen = false
     helpDiv.style.visibility = "hidden"
   } else {
-    //disableScroll()
     document.getElementById("help").className="fa-solid fa-x"
+    document.body.style.backgroundColor = "rgb(68, 68, 68)"
+    document.getElementById("license").style.color = "white"
     helpOpen = true
     helpDiv.style.visibility = "visible"
   }
@@ -597,44 +602,4 @@ function determineLeague() {
       randomPlayer.league = "serieA";
     }
   }
-}
-
-var keys = {37: 1, 38: 1, 39: 1, 40: 1};
-
-function preventDefault(e) {
-  e.preventDefault();
-}
-
-function preventDefaultForScrollKeys(e) {
-  if (keys[e.keyCode]) {
-    preventDefault(e);
-    return false;
-  }
-}
-
-// modern Chrome requires { passive: false } when adding event
-var supportsPassive = false;
-try {
-  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
-    get: function () { supportsPassive = true; } 
-  }));
-} catch(e) {}
-
-var wheelOpt = supportsPassive ? { passive: false } : false;
-var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
-
-
-function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
-}
-
-// call this to Enable
-function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
