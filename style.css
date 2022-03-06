@@ -45,6 +45,9 @@
   #revealwin {
     font-size: 4vw;
   }
+  #message {
+    font-size: 4vw;
+  }
   #reveallose {
     font-size: 4vw;
   }
@@ -61,6 +64,9 @@
 
   #title {
     font-size: 9vw;
+    top: 0%;
+    padding: 0px;
+    margin:0px;
   }
   #boxText {
     font-size:2vw;
@@ -105,6 +111,8 @@
   }
   #title {
     font-size: 4vw;
+    width: auto;
+    margin-left: 6vw;
   }
   #popupRow {
     height: 10%;
@@ -116,7 +124,7 @@
   }
   .popup {
     width: 30vw;
-    margin-left: -15vw;
+    margin-left: -12vw;
   }
   #boxText {
     font-size:1vw;
@@ -149,6 +157,9 @@
     border-radius: 1vw;
   }
   #revealwin {
+    font-size: 2vw;
+  }
+  #message {
     font-size: 2vw;
   }
   #reveallose {
@@ -233,6 +244,13 @@
   margin: 0px;
 }
 
+#message {
+  text-align: center;
+  font-family: "Arial";
+  vertical-align: middle;
+  margin: 0px;
+}
+
 #reveallose {
   text-align: center;
   font-family: "Arial";
@@ -256,7 +274,7 @@
 .popup {
   z-index: 1;
   position: fixed;
-  border-radius: 2vw;
+  border-radius: 20px;
 }
 
 #mainDiv {
@@ -267,9 +285,6 @@
 #title {
   text-align: center;
   font-family: "Arial";
-  top: 0%;
-  padding: 0px;
-  margin:0px;
   margin-top: 1.2vh;
 }
 
