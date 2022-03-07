@@ -442,3 +442,14 @@
   font-size: 1.7vw;
   margin-top: 30px;
 }
+
+#linkDiv2 {
+  position: relative;
+  width: 163px;
+  margin: auto;
+  margin-bottom: 0px;
+}
+
+#follow {
+  background-color: green;
+}

@@ -221,7 +221,6 @@ function showWinOrLose(popup) {
 }
 
 var finished = true
-
 document.body.style.height = "auto"
 const helpDiv = document.getElementById("helpDiv")
 helpDiv.parentNode.removeChild(helpDiv)
@@ -229,6 +228,7 @@ var helpOpen = false;
 document.getElementById("mainDiv").style.opacity = 1;
 document.getElementById("linkDiv").style.opacity = 1;
 document.getElementById("license").style.opacity = 1;
+
 
 document.getElementById("help").className="fa-regular fa-circle-question"
 document.getElementById("iconDiv").addEventListener("click",function(){
@@ -378,19 +378,19 @@ function compareRating(yourRating) {
   setTimeout(function() {
     if (difference == 0) {
       rect.style.backgroundColor = green;
-      createText("FUT Rating: "+yourRating+"\nCorrect FUT Rating",rect)
+      createText(yourRating+":\nCorrect FUT Rating",rect)
     } else if (difference == 1) {
       rect.style.backgroundColor = yellow;
-      createText("FUT Rating: "+yourRating+"\nWithin 1 Rating Away",rect)
+      createText(yourRating+":\nWithin 1 Rating Away",rect)
     } else if (difference < 5) {
        rect.style.backgroundColor = orange;
-       createText("FUT Rating: "+yourRating+"\n2-4 Away",rect)
+       createText(yourRating+":\n2-4 Away",rect)
     } else if (difference < 6) {
        rect.style.backgroundColor = red;
-       createText("FUT Rating: "+yourRating+"\n5-7 away",rect)
+       createText(yourRating+":\n5-7 away",rect)
     } else {
       rect.style.backgroundColor = grey;
-      createText("FUT Rating: "+yourRating+"\nFar Away",rect)
+      createText(yourRating+":\nFar Away",rect)
     }
   }, 100)
 }
@@ -402,19 +402,19 @@ function compareNumber(yourNumber) {
   setTimeout(function() {
     if (yourNumber == randomPlayer.number) {
       rect.style.backgroundColor = green;
-      createText("Number: "+yourNumber+"\nCorrect Jersey Number",rect)
+      createText(yourNumber+":\nCorrect Jersey Number",rect)
     } else if (difference == 1) {
       rect.style.backgroundColor = yellow;
-      createText("Number: "+yourNumber+"\nWithin 1 Number Away",rect)
+      createText(yourNumber+":\nWithin 1 Number Away",rect)
     } else if (difference < 5) {
        rect.style.backgroundColor = orange;
-       createText("Number: "+yourNumber+"\n2-4 Away",rect)
+       createText(yourNumber+":\n2-4 Away",rect)
     } else if (difference < 8) {
        rect.style.backgroundColor = red;
-       createText("Number: "+yourNumber+"\n5-7 Away",rect)
+       createText(yourNumber+":\n5-7 Away",rect)
     } else {
       rect.style.backgroundColor = grey;
-      createText("Number: "+yourNumber+"\nFar Away",rect)
+      createText(yourNumber+":\nFar Away",rect)
     }
   }, 100)
 }
