@@ -7,7 +7,6 @@
 @media only screen and (max-width: 750px) {
   .helpBottom {
     font-size: 8vw;
-    margin-bottom: 20px;
     margin-top: 40px;
   }
   .helpText {
@@ -171,12 +170,11 @@
   }
   .helpBottom {
     font-size: 4vw;
-    padding-bottom: 6vh;
     margin-top: 40px;
   }
   .helpText {
     font-size: 2vw;
-    margin-top: 30px;
+    margin-top: 4vh;
   }
 
   .helpTitle {
@@ -385,6 +383,7 @@
   margin-bottom: 0px;
 }
 #license {
+  font-size: 2.5vh;
   margin-top: 0px;
   text-align: center;
   position: relative;
@@ -436,4 +435,10 @@
   flex-direction: row; 
   align-items: center;
   justify-content: center;
+}
+#license2 {
+  color: white;
+  font-family: "Times New Roman";
+  font-size: 2.5vh;
+  margin-top: 30px;
 }
