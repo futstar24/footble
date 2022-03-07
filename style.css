@@ -32,7 +32,7 @@
     
   #iconDiv {
     top: 10px;
-    left: 5vw;
+    left: 6vw;
   }
   
   #help {
@@ -134,8 +134,8 @@
   }
 
   #iconDiv {
-    top: 5px;
-    left: 1.5vw;
+    top: 15px;
+    left: 27vw;
   }
   
   th {
@@ -439,6 +439,6 @@
 #license2 {
   color: white;
   font-family: "Times New Roman";
-  font-size: 2.5vh;
+  font-size: 1.7vw;
   margin-top: 30px;
 }

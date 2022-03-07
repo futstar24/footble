@@ -226,14 +226,14 @@ document.body.style.height = "auto"
 const helpDiv = document.getElementById("helpDiv")
 helpDiv.parentNode.removeChild(helpDiv)
 var helpOpen = false;
-document.getElementById("mainTable").style.opacity = 1;
+document.getElementById("mainDiv").style.opacity = 1;
 document.getElementById("linkDiv").style.opacity = 1;
 document.getElementById("license").style.opacity = 1;
 
 document.getElementById("help").className="fa-regular fa-circle-question"
 document.getElementById("iconDiv").addEventListener("click",function(){
   if (helpOpen) {
-    document.getElementById("mainTable").style.opacity = 1;
+    document.getElementById("mainDiv").style.opacity = 1;
     document.getElementById("linkDiv").style.opacity = 1;
     document.getElementById("license").style.opacity = 1;
     helpDiv.parentNode.removeChild(helpDiv)
@@ -243,7 +243,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     helpOpen = false
     helpDiv.style.visibility = "hidden"
   } else {
-    document.getElementById("mainTable").style.opacity = 0;
+    document.getElementById("mainDiv").style.opacity = 0;
     document.getElementById("linkDiv").style.opacity = 0;
     document.getElementById("license").style.opacity = 0;
     document.body.appendChild(helpDiv)
