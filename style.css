@@ -171,7 +171,7 @@
   }
   .helpBottom {
     font-size: 4vw;
-    padding-bottom: 5vh;
+    padding-bottom: 6vh;
     margin-top: 40px;
   }
   .helpText {
@@ -389,6 +389,7 @@
   text-align: center;
   position: relative;
 }
+
 #helpDiv {
   top:0%;
   position: absolute;
