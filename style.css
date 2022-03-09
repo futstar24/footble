@@ -462,3 +462,9 @@
 #follow {
   background-color: green;
 }
+
+#coffee {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+}

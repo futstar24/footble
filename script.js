@@ -228,6 +228,7 @@ var helpOpen = false;
 document.getElementById("mainDiv").style.opacity = 1;
 document.getElementById("linkDiv").style.opacity = 1;
 document.getElementById("license").style.opacity = 1;
+document.getElementById("coffee").style.opacity = 1;
 
 
 document.getElementById("help").className="fa-regular fa-circle-question"
@@ -236,6 +237,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     document.getElementById("mainDiv").style.opacity = 1;
     document.getElementById("linkDiv").style.opacity = 1;
     document.getElementById("license").style.opacity = 1;
+    document.getElementById("coffee").style.opacity = 1;
     helpDiv.parentNode.removeChild(helpDiv)
     document.getElementById("help").className="fa-regular fa-circle-question"
     document.body.style.backgroundColor = "white"
@@ -246,6 +248,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     document.getElementById("mainDiv").style.opacity = 0;
     document.getElementById("linkDiv").style.opacity = 0;
     document.getElementById("license").style.opacity = 0;
+    document.getElementById("coffee").style.opacity = 0;
     document.body.appendChild(helpDiv)
     document.getElementById("help").className="fa-solid fa-x"
     document.body.style.backgroundColor = "rgb(68, 68, 68)"
