@@ -9,6 +9,11 @@
     font-size: 8vw;
     margin-top: 40px;
   }
+
+  #license2 {
+    font-size: 4vw;
+  }
+
   .helpText {
     font-size: 5vw;
     margin-top: 30px;
@@ -105,6 +110,10 @@
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 751px) {
   
+  #license2 {
+    font-size: 1.7vw;
+  }
+
   #help {
     font-size: 6vw;
   }
@@ -439,8 +448,8 @@
 #license2 {
   color: white;
   font-family: "Times New Roman";
-  font-size: 1.7vw;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 #linkDiv2 {
