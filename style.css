@@ -218,17 +218,17 @@
 @keyframes drop {
   0%{opacity: 0}
   70%{
-    transform: translateY(60vh)
+    transform: translateY(40vh)
   }
   100%{
-    transform: translateY(40vh);
+    transform: translateY(30vh);
     opacity: 1;
   }
 }
 
 @keyframes hide {
   0%{
-    transform: translateY(40vh);
+    transform: translateY(30vh);
     opacity: 1;
   }
   100%{
