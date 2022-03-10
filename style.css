@@ -11,7 +11,7 @@
   }
 
   #inputBox {
-    width: 50vw;
+    width: 37vw;
     font-size: 4vw;
   }
 
@@ -73,8 +73,8 @@
     font-size: 4vw;
   }
   .rect {
-    width: 13.2vw;
-    height: 13.2vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 2vw;
     border: 1px solid black;
   }
@@ -90,11 +90,13 @@
     top: 0%;
     padding: 0px;
     margin-left: 10vw;
+    margin-top: 2vh;
   }
   
   #boxText {
-    font-size:2.8vw;
-    -webkit-text-stroke: 0.75px black;
+    font-size:3.5vw;
+    line-height: 3.2vw;
+    -webkit-text-stroke: 0.5px black;
   }
 
 
@@ -117,14 +119,14 @@
   }
 
   #mainTable {
-    width: 95%;
-    padding-left: 2.5%;
+    width: 99%;
     border-spacing: 0;
+    margin-left: -2px;
+    padding-left: 0px;
   }
 
   .playerLabel {
-    font-size: 3vw;
-    padding-right: 5px;
+    font-size: 2.7vw;
   }
 
   .horizontalDiv {
@@ -153,7 +155,8 @@
   #title {
     font-size: 4vw;
     width: auto;
-    margin-left: 9vw;
+    margin-left: 9vw;  
+    margin-top: 4vh;
   }
   #popupRow {
     height: 10%;
@@ -339,7 +342,6 @@
 #title {
   text-align: center;
   font-family: "Rockwell";
-  margin-top: 4vh;
   margin-bottom: 1vh;
 }
 
@@ -406,8 +408,8 @@
   width: 100%;
   display: table-cell;
   vertical-align: middle;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 1px;
+  padding-right: 1px;
   color: white;
 }
 
