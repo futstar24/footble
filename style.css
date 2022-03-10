@@ -10,8 +10,24 @@
     margin-top: 40px;
   }
 
+  #inputBox {
+    width: 50vw;
+    font-size: 4vw;
+  }
+
+  #guessButton {
+    font-size: 4vw;
+  }
+  #guessPlayer {
+    font-size: 4vw;
+  }
+
   #license2 {
     font-size: 4vw;
+  }
+
+  #coffee {
+    padding-left: 2.5vw;
   }
 
   .helpText {
@@ -32,11 +48,10 @@
 
   .popup {
     width: 60vw;
-    margin-left: -30vw;
+    margin-left: -23vw;
   }
     
   #iconDiv {
-    top: 10px;
     left: 6vw;
   }
   
@@ -44,6 +59,7 @@
     font-size: 10vw;
   }
   #winLoseTitle {
+    padding-top: 10px;
     font-size: 10vw;
   }
   #revealwin {
@@ -51,29 +67,34 @@
   }
   #message {
     font-size: 4vw;
+    padding-bottom: 10px;
   }
   #reveallose {
     font-size: 4vw;
   }
   .rect {
-    width: 14vw;
-    height: 14vw;
+    width: 13.2vw;
+    height: 13.2vw;
     border-radius: 2vw;
+    border: 1px solid black;
   }
 
   #mainTableTD {
-    font-size:3vw;
-    padding: 0.5vw;
+    font-size: 3vw;
+    padding: 0;
+    padding-bottom: 0.3vw;
   }
 
   #title {
     font-size: 9vw;
     top: 0%;
     padding: 0px;
-    margin:0px;
+    margin-left: 10vw;
   }
+  
   #boxText {
-    font-size:2vw;
+    font-size:2.8vw;
+    -webkit-text-stroke: 0.75px black;
   }
 
 
@@ -92,16 +113,24 @@
   }
 
   th {
-    font-size:2.6vw;
+    font-size:3.2vw;
   }
 
   #mainTable {
     width: 95%;
     padding-left: 2.5%;
+    border-spacing: 0;
   }
 
   .playerLabel {
-    font-size: 2.5vw;
+    font-size: 3vw;
+    padding-right: 5px;
+  }
+
+  .horizontalDiv {
+    margin-top: 10px;
+    height: 4.5vh;
+    margin-bottom: 10px;
   }
 }
  
@@ -110,6 +139,10 @@
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 751px) {
   
+  #inputBox {
+    width: 32vw;
+  }
+
   #license2 {
     font-size: 1.7vw;
   }
@@ -120,7 +153,7 @@
   #title {
     font-size: 4vw;
     width: auto;
-    margin-left: 6vw;
+    margin-left: 9vw;
   }
   #popupRow {
     height: 10%;
@@ -135,46 +168,54 @@
     margin-left: -12vw;
   }
   #boxText {
-    font-size:1vw;
+    font-size:1.6vw;
+    -webkit-text-stroke: 1px black;
   }
   #mainDiv {
-    width: 50vw;
-    margin-left: 25vw;
+    width: 55vw;
+    margin-left: 21vw;
   }
 
   #iconDiv {
-    top: 15px;
     left: 27vw;
   }
   
   th {
-    font-size:1.5vw;
+    font-size: 1.8vw;
   }
+
   #mainTableTD {
-    padding: 1vw;
+    padding: 0;
+    padding-bottom: 0.2vw;
   }
+
   #mainTable {
     width: 100%;
+    border-spacing: 0;
   }
   .playerLabel {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    padding-right: 5px;
   }
   .rect {
-    width: 6vw;
-    height: 6vw;
+    width: 7.5vw;
+    height: 7.5vw;
     border-radius: 1vw;
+    border: 2px solid black;
   }
   #revealwin {
     font-size: 2vw;
   }
   #message {
     font-size: 2vw;
+    padding-bottom: 10px;
   }
   #reveallose {
     font-size: 2vw;
   }
 
   #winLoseTitle {
+    padding-top: 10px;
     font-size: 5vw;
   }
   .helpBottom {
@@ -211,6 +252,10 @@
     margin-top: 10px;
     margin-bottom: 2vh;
     height: 4.5vh;
+    padding-right: 1.9vw;
+  }
+  #coffee {
+    padding-left: 1.2vw;
   }
   
 }
@@ -239,34 +284,36 @@
 
 #winLoseTitle {
   text-align: center;
-  font-family: "Arial";
+  font-family: "Rockwell";
   vertical-align: middle;
   margin: 0px;
 }
 
 #revealwin {
   text-align: center;
-  font-family: "Arial";
+  font-family: "Monaco";
   vertical-align: middle;
   margin: 0px;
 }
 
 #message {
   text-align: center;
-  font-family: "Arial";
+  font-family: "Monaco";
   vertical-align: middle;
   margin: 0px;
 }
 
 #reveallose {
   text-align: center;
-  font-family: "Arial";
+  font-family: "Monaco";
   vertical-align: middle;
   margin: 0px;
 }
 
 #popupTable {
   table-layout: fixed;
+  padding: 0;
+  border-spacing: 0;
 }
 
 #win {
@@ -286,13 +333,14 @@
 
 #mainDiv {
   position: relative;
-  height: 100%;
+  height: auto;
 }
 
 #title {
   text-align: center;
-  font-family: "Arial";
-  margin-top: 1.2vh;
+  font-family: "Rockwell";
+  margin-top: 4vh;
+  margin-bottom: 1vh;
 }
 
 #mainTable {
@@ -304,7 +352,7 @@
 
 .rect {
   background-color: white;
-  border: 1px solid black;
+  
   margin: auto;
   display: table;
 }
@@ -348,14 +396,19 @@
 .playerLabel {
   text-align: center;
   vertical-align: center;
+  font-family: "Geneva";
+  font-weight: bold;
 }
 
 #boxText {
-  font-family: Arial;
+  font-family: "Marker Felt";
   text-align: center;
-  width: 80%;
+  width: 100%;
   display: table-cell;
   vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
 }
 
 
@@ -365,10 +418,13 @@
   position: fixed;
 }
 
+th {
+  font-family: "Rockwell";
+}
 
 .helpText {
   color: rgb(172, 168, 168);
-  font-family: "Arial";
+  font-family: "Monaco";
   margin-bottom: 0px;
   margin-left: 20px;
   margin-right: 20px;
@@ -376,20 +432,21 @@
 
 .helpTitle {
   color: rgb(172, 168, 168);
-  font-family: "Arial";
+  font-family: "Rockwell";
   text-align: center;
 }
 
 .helpBottom {
   color: rgb(172, 168, 168);
-  font-family: "Arial";
+  font-family: "Rockwell";
   text-align: center;
 }
 #linkDiv {
   position: relative;
   width: 163px;
   margin: auto;
-  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 #license {
   font-size: 2.5vh;
@@ -411,6 +468,9 @@
 #iconDiv {
   position: absolute;
   z-index: 3;
+  margin: 0;
+  padding: 0px;
+  margin-top: -0.7vh;
   width: auto;
 }
 
@@ -421,20 +481,21 @@
 }
 
 #inputBox {
-  font-family: "Arial";
+  font-family: "Gill Sans";
 }
 
 #guessPlayer {
   height: auto;
   font-size: auto;
   text-align: center;
-  font-family: "Arial";
+  font-family: "Gill Sans";
   padding: 1vw;
 }
 
 #guessButton {
   height: auto;
   width: auto;
+  font-family: "Gill Sans";
 }
 
 .horizontalDiv {
@@ -459,12 +520,13 @@
   margin-bottom: 0px;
 }
 
-#follow {
-  background-color: green;
-}
-
 #coffee {
   position: relative;
   display: table;
   margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+body {
+  background-color:  rgba(159,249,176,1)
 }

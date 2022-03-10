@@ -107,6 +107,8 @@ function createBoxes(rectName) {
     rect.style.backgroundColor = items[1]+","+items[2]+","+items[3]
     if(items[0] != "") {
       createText(items[0],rect)
+    } else {
+      rect.style.backgroundColor = "rgb(143, 141, 141)"
     }
   }
 }
@@ -165,11 +167,11 @@ let inputBox = document.getElementById("inputBox")
 
 let guessButton = document.getElementById("guessButton")
 
-const green = "rgb(10, 191, 16)"
-const yellow = "rgb(247, 247, 15)"
-const orange = "rgb(191, 119, 10)"
-const red = "rgb(191, 10, 10)"
-const grey = "rgb(145, 144, 141)"
+const green = "rgb(25, 125, 14)"
+const yellow = "rgb(219, 227, 43)"
+const orange = "rgb(189, 118, 19)"
+const red = "rgb(189, 19, 19)"
+const grey = "rgb(87, 87, 87)"
 
 var gameOver = (localStorage.getItem("gameOver"))
 
@@ -240,7 +242,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     document.getElementById("coffee").style.opacity = 1;
     helpDiv.parentNode.removeChild(helpDiv)
     document.getElementById("help").className="fa-regular fa-circle-question"
-    document.body.style.backgroundColor = "white"
+    document.body.style.backgroundColor = "rgba(159,249,176,1)"
     document.getElementById("license").style.color = "black"
     helpOpen = false
     helpDiv.style.visibility = "hidden"
@@ -388,7 +390,7 @@ function compareRating(yourRating) {
     } else if (difference < 5) {
        rect.style.backgroundColor = orange;
        createText(yourRating+":\n2-4 Away",rect)
-    } else if (difference < 6) {
+    } else if (difference < 8) {
        rect.style.backgroundColor = red;
        createText(yourRating+":\n5-7 away",rect)
     } else {
