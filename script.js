@@ -85,7 +85,7 @@ if (firstTime == null) {
 }
 
 var savedPlayer = localStorage.getItem("randomPlayer")
-if (savedPlayer == null) {
+if (savedPlayer == null || savedPlayer == "undefined") {
   localStorage.setItem("randomPlayer",randomPlayerName)
 }
 if (savedPlayer != randomPlayerName) {
