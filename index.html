@@ -162,10 +162,11 @@
 					const players = createPlayers()
 					const nameList = createNameList()
 					var list = document.getElementById("players");
+					shuffle(nameList)
 					for (name of nameList) {
-					var option = document.createElement('option');
-					option.value = name;
-					list.appendChild(option);
+						var option = document.createElement('option');
+						option.value = name;
+						list.appendChild(option);
 					}
 				  </script>
 			</datalist>

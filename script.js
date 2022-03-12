@@ -16,7 +16,7 @@ const bundes = ["Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "RB Le
 
 const laliga = ["Real Madrid","Sevilla","Real Betis","Barcelona","Athletico Madrid","Real Sociedad","Villareal","Athletic Club","Osasuna","Celta Vigo","Rayo Vallecano","Valencia","RCD Espanyol","Elche","Real Mallorca","Getafe","Granada","Alaves","Cadiz","Levante"]
 
-const ligue1 = ["PSG","Olympique de Marseille","Nice","Strasbourg","Rennes","AS Monaco","Olympique Lyonnais","Lens","Nantes","Lille","Montpellier","Brest","Angers","Reims","Clermont","Troyes","FC Lorient","Saint-Etienne","Metz","Bordeaux"]
+const ligue1 = ["PSG","Olympique de Marseille","Nice","Strasbourg","Rennes","Monaco","Olympique Lyonnais","Lens","Nantes","Lille","Montpellier","Brest","Angers","Reims","Clermont","Troyes","FC Lorient","Saint-Etienne","Metz","Bordeaux"]
 
 const serieA = ["Milan","Inter","Napoli","Juventus","Atalanta","Lazio","Roma","Fiorentina","Hellas Verona","Torino","Empoli","Sassuolo","Bologna","Spezia","Udinese","Sampdoria","Venezia","Cagliari","Genoa","Salernitana"]
 
@@ -62,6 +62,9 @@ playerAnswers["3/10/2022"] = "Joao Cancelo"
 playerAnswers["3/11/2022"] = "Wojciech Szczesny"
 playerAnswers["3/12/2022"] = "Marquinhos"
 playerAnswers["3/13/2022"] = "Kyle Walker"
+playerAnswers["3/14/2022"] = "Mikel Oyarzabal"
+playerAnswers["3/15/2022"] = "Pierre-Emerick Aubameyang"
+playerAnswers["3/16/2022"] = "Lorenzo Insigne"
 
 
 var randomPlayer = ""
