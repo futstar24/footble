@@ -171,7 +171,7 @@ let inputBox = document.getElementById("inputBox")
 let guessButton = document.getElementById("guessButton")
 
 const green = "rgb(25, 125, 14)"
-const yellow = "rgb(219, 227, 43)"
+const yellow = "rgb(179, 173, 18)"
 const orange = "rgb(189, 118, 19)"
 const red = "rgb(189, 19, 19)"
 const grey = "rgb(87, 87, 87)"
