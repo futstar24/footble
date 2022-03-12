@@ -165,7 +165,7 @@
 					const players = createPlayers()
 					const nameList = createNameList()
 					var list = document.getElementById("players");
-					shuffle(nameList)
+					nameList.sort()
 					for (name of nameList) {
 						var option = document.createElement('option');
 						option.value = name;
