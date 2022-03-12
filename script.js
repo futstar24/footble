@@ -202,17 +202,36 @@ document.body.addEventListener("click", function (evt) {
   console.log(evt.target)
 })
 
+var statsOpen = false;
+document.getElementById("statsDiv").addEventListener("click",function(){
+  if (statsOpen) {
+    document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
+    document.getElementById(localStorage.getItem("gameOver")).style.animation = "hide 1s ease forwards"
+    statsOpen = false
+  } else {
+    showWinOrLose(localStorage.getItem("gameOver"))
+    document.getElementById("stats").className="fa-solid fa-x"
+    statsOpen = true
+  }
+})
+
 function showWinOrLose(popup) {
   element = document.getElementById(popup)
   element.style.visibility = "visible";
-  document.getElementById("reveal"+popup).innerText = "The player was " + randomPlayer.name + "!";
+  if (element.id != "none") {
+    document.getElementById("reveal"+popup).innerText = "The player was " + randomPlayer.name + "!";
+  }
   element.style.animation = "drop 0.5s ease forwards"
+  document.getElementById("stats").className="fa-solid fa-x"
+  statsOpen = true
   var delayInMilliseconds = 250;
   setTimeout(function() {
     document.body.addEventListener("click", function (evt) {
       if (evt.target.id != "popupElement" && evt.target.id != "winLoseTitle" && evt.target.id != ("reveal"+popup) && element.style.visibility == "visible") {
         console.log("working")
         element.style.animation = "hide 1s ease forwards"
+        statsOpen = false
+        document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
         document.body.removeEventListener("click", arguments.callee,false)
       }
       
@@ -230,30 +249,19 @@ document.body.style.height = "auto"
 const helpDiv = document.getElementById("helpDiv")
 helpDiv.parentNode.removeChild(helpDiv)
 var helpOpen = false;
-document.getElementById("mainDiv").style.opacity = 1;
-document.getElementById("linkDiv").style.opacity = 1;
-document.getElementById("license").style.opacity = 1;
-document.getElementById("coffee").style.opacity = 1;
-
+showMainScreen()
 
 document.getElementById("help").className="fa-regular fa-circle-question"
 document.getElementById("iconDiv").addEventListener("click",function(){
   if (helpOpen) {
-    document.getElementById("mainDiv").style.opacity = 1;
-    document.getElementById("linkDiv").style.opacity = 1;
-    document.getElementById("license").style.opacity = 1;
-    document.getElementById("coffee").style.opacity = 1;
+    showMainScreen()
     helpDiv.parentNode.removeChild(helpDiv)
     document.getElementById("help").className="fa-regular fa-circle-question"
-    document.body.style.backgroundColor = "rgba(159,249,176,1)"
     document.getElementById("license").style.color = "black"
     helpOpen = false
     helpDiv.style.visibility = "hidden"
   } else {
-    document.getElementById("mainDiv").style.opacity = 0;
-    document.getElementById("linkDiv").style.opacity = 0;
-    document.getElementById("license").style.opacity = 0;
-    document.getElementById("coffee").style.opacity = 0;
+    hideMainScreen()
     document.body.appendChild(helpDiv)
     document.getElementById("help").className="fa-solid fa-x"
     document.body.style.backgroundColor = "rgb(68, 68, 68)"
@@ -262,6 +270,27 @@ document.getElementById("iconDiv").addEventListener("click",function(){
     helpDiv.style.visibility = "visible"
   }
 })
+
+
+
+function hideMainScreen() {
+  document.getElementById("mainDiv").style.opacity = 0;
+  document.getElementById("linkDiv").style.opacity = 0;
+  document.getElementById("license").style.opacity = 0;
+  document.getElementById("coffee").style.opacity = 0;
+  document.getElementById("statsDiv").style.opacity = 0;
+  document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
+  statsOpen = false
+
+}
+function showMainScreen() {
+  document.getElementById("mainDiv").style.opacity = 1;
+  document.getElementById("linkDiv").style.opacity = 1;
+  document.getElementById("license").style.opacity = 1;
+  document.getElementById("coffee").style.opacity = 1;
+  document.getElementById("statsDiv").style.opacity = 1;
+  document.body.style.backgroundColor = "rgba(159,249,176,1)"
+}
 
 guessButton.addEventListener("click",function() {
   window.scroll({

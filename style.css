@@ -54,8 +54,14 @@
   #iconDiv {
     left: 6vw;
   }
+  #statsDiv {
+    left: 80vw;
+  }
   
   #help {
+    font-size: 10vw;
+  }
+  #stats {
     font-size: 10vw;
   }
   #winLoseTitle {
@@ -151,6 +157,11 @@
   #help {
     font-size: 6vw;
   }
+
+  #stats {
+    font-size: 6vw;
+  }
+
   #title {
     font-size: 4vw;
     width: auto;
@@ -180,6 +191,10 @@
 
   #iconDiv {
     left: 27vw;
+  }
+
+  #statsDiv {
+    left: 70vw;
   }
   
   th {
@@ -324,6 +339,10 @@
 }
 #lose {
   background-color: red;
+  visibility: hidden;
+}
+#none {
+  background-color: gray;
   visibility: hidden;
 }
 
@@ -473,6 +492,21 @@ th {
   padding: 0px;
   margin-top: -0.7vh;
   width: auto;
+}
+
+#statsDiv {
+  position: absolute;
+  z-index: 3;
+  margin: 0;
+  padding: 0px;
+  margin-top: -0.7vh;
+  width: 100px;
+  height: 100px;
+}
+
+#stats {
+  padding: 0px;
+  margin: 0px;
 }
 
 .popup {
