@@ -6,6 +6,18 @@
 
 @media only screen and (max-width: 750px) {
 
+  #tableDiv {
+    margin-left: -12px;
+  }
+
+  #playerNamesTable th{
+    height: 3.5vw;
+  } 
+  
+  #playerNamesTable td{
+    height: 8vw;
+  } 
+
   #copyText {
     width: 60;
   }
@@ -107,7 +119,7 @@
     width: 14vw;
     height: 14vw;
     border-radius: 2vw;
-    border: 1px solid black;
+    border: 2px solid black;
   }
 
   #mainTableTD {
@@ -142,10 +154,12 @@
   }
 
   #mainTable {
-    width: 99%;
+    width: 75%;
     border-spacing: 0;
-    margin-left: -2px;
-    padding-left: 0px;
+  }
+
+  #playerNamesTable {
+    width: 25%;
   }
 
   .playerLabel {
@@ -164,6 +178,14 @@
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 751px) {
   
+  #playerNamesTable th{
+    height: 3.5vw;
+  } 
+  
+  #playerNamesTable td{
+    height: 8vw;
+  } 
+
   #copyText {
     width: 70%;
   }
@@ -230,9 +252,14 @@
   }
 
   #mainTable {
-    width: 100%;
+    width: 75%;
     border-spacing: 0;
   }
+
+  #playerNamesTable {
+    width: 25%;
+  }
+
   .playerLabel {
     font-size: 1.8vw;
     padding-right: 5px;
@@ -399,6 +426,10 @@
 
 #mainTable {
   table-layout: fixed;
+  font-family: "Arial";
+}
+
+#playerNamesTable {
   font-family: "Arial";
 }
 
@@ -660,3 +691,19 @@ body {
 #guessHolder {
   height: auto;
 }
+
+#tableDiv {
+  direction: horizontal;
+  display: flex;
+  flex-direction: row; 
+  width: 100%;
+}
+
+#playerNamesTable th{
+  padding: 0px;
+} 
+
+#playerNamesTable td{
+  font-family: "Gill Sans";
+  padding: 0px;
+} 

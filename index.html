@@ -34,131 +34,130 @@
 	</div>
 	<div id="mainDiv">
 	  <h1 id="title">FOOTBLE</h1>
-		<table id="mainTable" cellspacing="0">
-			<tr>
-				<th></th>
-				<th>Team</th>
-				<th>Country</th>
-				<th>Jersey Number</th>
-				<th>FUT Rating</th>
-				<th>Position</th>
-			</tr>
-			<col style="width:25%">
-			<col style="width:15%">
-			<col style="width:15%">
-			<col style="width:15%">
-			<col style="width:15%">
-			<col style="width:15%">
-			<tr>
-				<td class="playerLabel" id="player1"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect1"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect1"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect1"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect1"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect1"></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="playerLabel" id="player2"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect2"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect2"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect2"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect2"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect2"></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="playerLabel" id="player3"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect3"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect3"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect3"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect3"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect3"></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="playerLabel" id="player4"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect4"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect4"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect4"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect4"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect4"></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="playerLabel" id="player5"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect5"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect5"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect5"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect5"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect5"></div>
-				</td>
-			</tr>
-			<tr>
-				<td class="playerLabel" id="player6"></td>
-				<td id="mainTableTD">
-					<div class="rect" id="teamRect6"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="countryRect6"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="numberRect6"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="ratingRect6"></div>
-				</td>
-				<td id="mainTableTD">
-					<div class="rect" id="positionRect6"></div>
-				</td>
-			</tr>
-		</table>
-		
+		<div id = "tableDiv">
+			<table id = "playerNamesTable">
+				<tr>
+					<th></th>
+				</tr>
+				<tr><td class="playerLabel" id="player1"></td></tr>
+				<tr><td class="playerLabel" id="player2"></td></tr>
+				<tr><td class="playerLabel" id="player3"></td></tr>
+				<tr><td class="playerLabel" id="player4"></td></tr>
+				<tr><td class="playerLabel" id="player5"></td></tr>
+				<tr><td class="playerLabel" id="player6"></td></tr>
+			</table>
+			<table id="mainTable" cellspacing="0">
+				<tr>
+					<th>Team</th>
+					<th>Country</th>
+					<th>Jersey Number</th>
+					<th>FUT Rating</th>
+					<th>Position</th>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect1"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect1"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect1"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect1"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect1"></div>
+					</td>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect2"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect2"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect2"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect2"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect2"></div>
+					</td>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect3"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect3"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect3"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect3"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect3"></div>
+					</td>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect4"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect4"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect4"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect4"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect4"></div>
+					</td>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect5"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect5"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect5"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect5"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect5"></div>
+					</td>
+				</tr>
+				<tr>
+					<td id="mainTableTD">
+						<div class="rect" id="teamRect6"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="countryRect6"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="numberRect6"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="ratingRect6"></div>
+					</td>
+					<td id="mainTableTD">
+						<div class="rect" id="positionRect6"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 	<div id = "guessHolder">
 		<div class="horizontalDiv">
