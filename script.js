@@ -3,8 +3,6 @@ console.log(navigator)
 
 var guess = parseInt(localStorage.getItem("guess"));
 
-statsOpen = false
-var gameOver = (localStorage.getItem("gameOver"))
 
 
 const element = document.getElementById("popup")
@@ -91,6 +89,10 @@ if (localStorage.getItem("player5") == null) {
 if (localStorage.getItem("player6") == null) {
   localStorage.setItem("player6","Player 6")
 }
+
+
+statsOpen = false
+var gameOver = (localStorage.getItem("gameOver"))
 //reset()
 document.getElementById("player1").innerHTML = localStorage.getItem("player1")
 document.getElementById("player2").innerHTML = localStorage.getItem("player2")
@@ -325,7 +327,7 @@ document.getElementById("iconDiv").addEventListener("click",function(){
 
 function showWinOrLose(popup) {
   element.style.visibility = "visible";
-  if (popup != "none") {
+  if (popup != "none" && popup != null) {
     reveal.innerHTML = "The player was " + randomPlayer.name + "!"
     element.appendChild(reveal)
     element.appendChild(message)
