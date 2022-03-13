@@ -5,6 +5,14 @@
 
 
 @media only screen and (max-width: 750px) {
+
+  #copyText {
+    width: 60;
+  }
+  #buttonHolder {
+    width: 40%;
+  }
+
   .helpBottom {
     font-size: 8vw;
     margin-top: 40px;
@@ -16,6 +24,9 @@
   }
 
   #guessButton {
+    font-size: 4vw;
+  }
+  #incorrect {
     font-size: 4vw;
   }
   #guessPlayer {
@@ -46,9 +57,9 @@
     margin-left:-10px;
   }
 
-  .popup {
-    width: 60vw;
-    margin-left: -23vw;
+  #popup {
+    width: 70vw;
+    margin-left: -29vw;
   }
     
   #iconDiv {
@@ -68,14 +79,28 @@
     padding-top: 10px;
     font-size: 10vw;
   }
-  #revealwin {
+  #reveal {
     font-size: 4vw;
   }
   #message {
     font-size: 4vw;
     padding-bottom: 10px;
   }
-  #reveallose {
+  #copyText {
+    font-size: 4vw;
+  }
+  #copyButton {
+    padding-bottom: 10px;
+    font-size: 4vw;
+  }
+  #time {
+    font-size: 4vw;
+    padding-bottom: 10px;
+  }
+  #shareButton {
+    padding-bottom: 10px;
+  }
+  #share {
     font-size: 4vw;
   }
   .rect {
@@ -104,15 +129,8 @@
     line-height: 3.2vw;
   }
 
-
-  #popupRow {
-    height: 10%;
-  }
-
-  #popupElement {
-    width: 60%;
+  .popupElement {
     padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   #mainDiv {
@@ -134,7 +152,7 @@
     font-size: 2.7vw;
   }
 
-  .horizontalDiv {
+  #guessHolder {
     margin-top: 10px;
     height: 4.5vh;
     margin-bottom: 10px;
@@ -146,6 +164,17 @@
 /* Extra big screen devices (1200px and above) */
 @media only screen and (min-width: 751px) {
   
+  #copyText {
+    width: 70%;
+  }
+  #buttonHolder {
+    width: 10%;
+  }
+
+  #spacer {
+    width: 20%;
+  }
+
   #inputBox {
     width: 32vw;
   }
@@ -168,21 +197,15 @@
     margin-left: 9vw;  
     margin-top: 4vh;
   }
-  #popupRow {
-    height: 10%;
-  }
-  #popupElement {
-    width: 60%;
+  .popupElement {
     padding-top: 10px;
-    padding-bottom: 10px;
   }
-  .popup {
-    width: 30vw;
-    margin-left: -12vw;
+  #popup {
+    width: 34vw;
+    margin-left: -13vw;
   }
   #boxText {
     font-size:1.6vw;
-    /*-webkit-text-stroke: 1px black;*/
   }
   #mainDiv {
     width: 55vw;
@@ -220,20 +243,34 @@
     border-radius: 1vw;
     border: 2px solid black;
   }
-  #revealwin {
+  #reveal {
     font-size: 2vw;
   }
   #message {
     font-size: 2vw;
     padding-bottom: 10px;
   }
-  #reveallose {
+  #time {
+    font-size: 2vw;
+    padding-bottom: 10px;
+  }
+  #shareButton {
+    padding-bottom: 10px;
+  }
+  #share {
     font-size: 2vw;
   }
 
   #winLoseTitle {
     padding-top: 10px;
     font-size: 5vw;
+  }
+  #copyText {
+    padding-bottom: 10px;
+    font-size: 1.5vw;
+  }
+  #copyButton {
+    font-size: 1.5vw;
   }
   .helpBottom {
     font-size: 4vw;
@@ -259,16 +296,19 @@
   #guessButton {
     font-size: 2vw;
   }
+  #incorrect {
+    font-size: 2vw;
+  }
+
   #inputBox {
     font-size: 2vw;
   }
   #guessPlayer {
     font-size: 2vw;
   }
-  .horizontalDiv {
+  #guessHolder {
     margin-top: 10px;
     margin-bottom: 2vh;
-    height: 4.5vh;
     padding-right: 1.9vw;
   }
   #coffee {
@@ -280,17 +320,17 @@
 @keyframes drop {
   0%{opacity: 0}
   70%{
-    transform: translateY(40vh)
+    transform: translateY(30vh)
   }
   100%{
-    transform: translateY(30vh);
+    transform: translateY(20vh);
     opacity: 1;
   }
 }
 
 @keyframes hide {
   0%{
-    transform: translateY(30vh);
+    transform: translateY(20vh);
     opacity: 1;
   }
   100%{
@@ -299,57 +339,51 @@
   }
 }
 
-#winLoseTitle {
+
+.popupElement {
+  width: 100%;
   text-align: center;
-  font-family: "Rockwell";
-  vertical-align: middle;
   margin: 0px;
+  color: white;
 }
 
-#revealwin {
-  text-align: center;
-  font-family: "Monaco";
-  vertical-align: middle;
-  margin: 0px;
+#winLoseTitle {
+  font-family: "Rockwell";
 }
 
 #message {
+  font-family: "Monaco";
+}
+
+#time {
+  font-family: "Monaco";
+}
+
+#share {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+#shareButton {
+  width: auto;
+  background-color: rgb(50, 105, 25);
+  border-color: rgb(66, 140, 32);
+}
+
+#reveal {
   text-align: center;
   font-family: "Monaco";
   vertical-align: middle;
   margin: 0px;
 }
 
-#reveallose {
-  text-align: center;
-  font-family: "Monaco";
-  vertical-align: middle;
-  margin: 0px;
-}
-
-#popupTable {
-  table-layout: fixed;
-  padding: 0;
-  border-spacing: 0;
-}
-
-#win {
-  background-color: green;
-  visibility: hidden;
-}
-#lose {
-  background-color: red;
-  visibility: hidden;
-}
-#none {
-  background-color: gray;
-  visibility: hidden;
-}
-
-.popup {
+#popup {
   z-index: 1;
-  position: fixed;
+  position: absolute;
+  visibility: hidden;
   border-radius: 20px;
+  background-color: rgb(41, 41, 41);
 }
 
 #mainDiv {
@@ -509,7 +543,7 @@ th {
   margin: 0px;
 }
 
-.popup {
+#popup {
   top: 0vh;
   height: auto;
   left: 50vw;
@@ -564,4 +598,65 @@ th {
 
 body {
   background-color:  rgba(159,249,176,1)
+}
+
+#adDiv {
+  width: 100%;
+  background-color: blue;
+  position: relative;
+}
+
+#copy {
+  background-color: rgb(41, 41, 41);
+  border-radius: 20px;
+  z-index: 4;
+  direction: horizontal;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  margin-top: -20px;
+}
+
+#copyText {
+  font-family: "Monaco";
+  white-space: pre-line;
+  color: white;
+  text-align: center;
+}
+
+#buttonHolder {
+  height: auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+#copyButton {
+  width: auto;
+  height: auto;
+  font-family: "Monaco";
+  text-align: center;
+}
+
+#success {
+  color: white;
+  font-family: "Monaco";
+  text-align: center;
+}
+
+#incorrect {
+  color: black;
+  font-family: "Gill Sans";
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#guessHolder {
+  height: auto;
 }

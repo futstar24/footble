@@ -1,3 +1,50 @@
+const navigator = window.navigator
+console.log(navigator)
+
+var guess = parseInt(localStorage.getItem("guess"));
+
+statsOpen = false
+var gameOver = (localStorage.getItem("gameOver"))
+
+
+const element = document.getElementById("popup")
+const reveal = document.getElementById("reveal")
+const message = document.getElementById("message")
+const time = document.getElementById("time")
+const share = document.getElementById("share")
+const winLoseTitle = document.getElementById("winLoseTitle")
+const copy = document.getElementById("copy")
+const shareButton = document.getElementById("shareButton")
+const copyButton = document.getElementById("copyButton")
+
+removePopupElements()
+
+function removePopupElements() {
+  try {
+    share.parentNode.removeChild(share)
+  } catch {
+
+  }
+  try {
+    message.parentNode.removeChild(message)
+  } catch {
+
+  }
+  try {
+    time.parentNode.removeChild(time)
+  } catch {
+
+  }
+  try {
+    reveal.parentNode.removeChild(reveal)
+  } catch {
+  }
+  try {
+    copy.parentNode.removeChild(copy)
+  } catch {
+  }
+}
+
 const europe = ["England","Wales","Ireland","France","Germany","Belgium","Poland","Spain","Portugal","Italy","Netherlands","Greece","Finland","Lithuania","Slovakia","Malta","Monaco","Cyprus","Luxembourg","Montenegro","Slovenia","Scotland","Kosovo","Latvia","Estonia","Andorra","Vatican City","Albania","Armenia","Austria","Azerbaijan","Belarus","Bosnia and Herzegovina","Bulgaria","Croatia","Czechia","Denmark","Georgia","Hungary","Iceland","Kazakhstan","Liechtenstein","Moldova","North Macedonia","Norway","Romania","Russia","San Marino","Serbia","Sweden","Switzerland","Turkey","Ukraine"];
 
 const africa = ["Egypt","Algeria","Mali","Senegal","Nigeria","Ethiopia","Democratic Republic of the Congo","Tanzania","South Africa","Kenya","Uganda","Sudan","Morocco","Angola","Mozambique","Ghana","Madagascar","Cameroon","Ivory Coast","Niger","Burkina Faso","Malawi","Zambia","Chad","Somalia","Zimbabwe","Guinea","Rwanda","Benin","Burundi","Tunisia","South Sudan","Togo","Sierra Leone","Libya","Congo","Liberia","Central African Republic","Mauritania","Eritrea","Namibia","Gambia","Botswana","Gabon","Lesotho","Guinea-Bissau","Equatorial Guinea","Mauritius","Eswatini","Djibouti","Comoros","Cabo Verde","Sao Tome & Principe","Seychelles"];
@@ -116,14 +163,14 @@ function createBoxes(rectName) {
   }
 }
 
-
+night = 0
 
 console.log(document.body.style.height)
 resetAtMidnight()
 
 function resetAtMidnight() {
     var now = new Date();
-    let night = new Date(); 
+    night = new Date(); 
     night.setDate(new Date().getDate()+1)
     night.setHours(0)
     night.setMinutes(0)
@@ -131,10 +178,9 @@ function resetAtMidnight() {
     night.setMilliseconds(0)
     console.log(night.getTime())
     console.log(now.getTime())
-    var msToMidnight = night.getTime() - now.getTime();
+    msToMidnight = night.getTime() - now.getTime();
     console.log(msToMidnight)
     setTimeout(function() {
-      console.log("this actually worked")
       reset();
       resetAtMidnight();
     }, msToMidnight);
@@ -157,14 +203,40 @@ function reset() {
   window.location.reload();
 }
 
+
+updateTime()
+var myfunc = setInterval(function() {
+  updateTime()
+}, 1000)
+
+function updateTime() {
+  var now = new Date().getTime();
+  var end = night.getTime()
+  var timeleft = end - now;
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+  if (digits_count(minutes) == 1) {
+    minutes = "0"+minutes
+  }
+  if (digits_count(seconds) == 1) {
+    seconds = "0"+seconds
+  }
+  if (minutes == 0) {
+    minutes = "00"
+  }
+  if (seconds == 0) {
+    seconds = "00"
+  }
+  time.innerHTML = "Next Footble:\n"+hours + ":" + minutes +  ":" + seconds
+}
+
 function resetRects(rectName) {
   for (var rectNum = 1; rectNum < 7; rectNum++) {
     localStorage.setItem(rectName+rectNum,"")
   }
 }
 
-
-var guess = parseInt(localStorage.getItem("guess"));
 
 let inputBox = document.getElementById("inputBox")
 
@@ -176,11 +248,7 @@ const orange = "rgb(189, 118, 19)"
 const red = "rgb(189, 19, 19)"
 const grey = "rgb(87, 87, 87)"
 
-var gameOver = (localStorage.getItem("gameOver"))
-
-if (gameOver != "none") {
-  showWinOrLose(gameOver)
-}
+showWinOrLose(gameOver)
 
 function saveBoxes(rectName) {
   for(var rectNum = 1; rectNum < 7; rectNum++) {
@@ -191,9 +259,7 @@ function saveBoxes(rectName) {
       console.log("success")
     } catch (error) {
     }
-    console.log(text)
     localStorage.setItem((rectName+rectNum),[text,rect.style.backgroundColor])
-    console.log(localStorage.getItem((rectName+rectNum)))
     
   }
 }
@@ -202,47 +268,27 @@ document.body.addEventListener("click", function (evt) {
   console.log(evt.target)
 })
 
-var statsOpen = false;
+statsStillClosing = false
+
 document.getElementById("statsDiv").addEventListener("click",function(){
-  if (statsOpen) {
-    document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
-    document.getElementById(localStorage.getItem("gameOver")).style.animation = "hide 1s ease forwards"
-    statsOpen = false
-  } else {
-    showWinOrLose(localStorage.getItem("gameOver"))
-    document.getElementById("stats").className="fa-solid fa-x"
-    statsOpen = true
+  console.log(statsOpen)
+  if (!statsStillClosing) {
+    if (statsOpen) {
+      document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
+      element.style.animation = "hide 1s ease forwards"
+      statsStillClosing = true;
+      setTimeout(function() {
+        removePopupElements()
+        statsStillClosing = false
+      }, 1000)
+      statsOpen = false
+    } else {
+      document.getElementById("stats").className="fa-solid fa-x"
+      showWinOrLose(localStorage.getItem("gameOver"))
+      statsOpen = true
+    }
   }
 })
-
-function showWinOrLose(popup) {
-  element = document.getElementById(popup)
-  element.style.visibility = "visible";
-  if (element.id != "none") {
-    document.getElementById("reveal"+popup).innerText = "The player was " + randomPlayer.name + "!";
-  }
-  element.style.animation = "drop 0.5s ease forwards"
-  document.getElementById("stats").className="fa-solid fa-x"
-  statsOpen = true
-  var delayInMilliseconds = 250;
-  setTimeout(function() {
-    document.body.addEventListener("click", function (evt) {
-      if (evt.target.id != "popupElement" && evt.target.id != "winLoseTitle" && evt.target.id != ("reveal"+popup) && element.style.visibility == "visible") {
-        console.log("working")
-        element.style.animation = "hide 1s ease forwards"
-        statsOpen = false
-        document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
-        document.body.removeEventListener("click", arguments.callee,false)
-      }
-      
-    });
-  }, delayInMilliseconds);
-  saveBoxes("teamRect")
-  saveBoxes("countryRect")
-  saveBoxes("numberRect")
-  saveBoxes("ratingRect")
-  saveBoxes("positionRect")
-}
 
 var finished = true
 document.body.style.height = "auto"
@@ -273,6 +319,114 @@ document.getElementById("iconDiv").addEventListener("click",function(){
 
 
 
+function showWinOrLose(popup) {
+  element.style.visibility = "visible";
+  if (popup != "none") {
+    element.appendChild(message)
+    element.appendChild(time)
+    if (popup == "win") {
+      winLoseTitle.innerHTML = "You Win!"
+    } else {
+      winLoseTitle.innerHTML = "You Lose"
+    }
+  } else {
+    if (guess == 0) {
+      winLoseTitle.innerHTML = "You Haven't Played Yet Today!"
+    } else {
+      winLoseTitle.innerHTML = "You Haven't Finished Yet Today!"
+    }
+  }
+  element.appendChild(share)
+  element.style.animation = "drop 0.5s ease forwards"
+  document.getElementById("stats").className="fa-solid fa-x"
+  statsOpen = true
+  var delayInMilliseconds = 250;
+  setTimeout(function() {
+    document.body.addEventListener("click", hideStats);
+  }, delayInMilliseconds);
+  saveBoxes("teamRect")
+  saveBoxes("countryRect")
+  saveBoxes("numberRect")
+  saveBoxes("ratingRect")
+  saveBoxes("positionRect")
+}
+
+hideStats = function(evt) {
+  if (!evt.target.classList.contains("noClick")) {
+    element.style.animation = "hide 1s ease forwards"
+    statsStillClosing = true
+    setTimeout(function() {
+      removePopupElements()
+      statsStillClosing = false
+    }, 1000)
+    statsOpen = false
+    document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
+    document.body.removeEventListener("click",hideStats)
+  }
+}
+
+copyOpen = false
+
+shareClick = function (evt) {
+  
+  if(!copyOpen) {
+    console.log(evt)
+    var text = createShareText()
+    if (navigator.share) {
+      navigator.share({
+        title: 'Footble',
+        text: text,
+      }).then(() => {
+        console.log('Thanks for sharing!');
+      })
+      .catch(console.error);
+    }
+      element.appendChild(copy)
+      document.getElementById("copyText").style.whiteSpace = "pre-line"
+      document.getElementById("copyText").innerHTML = text
+      document.getElementById("copyText").style.color = "white"
+      copyOpen = true
+      setTimeout(function() {
+        document.body.addEventListener("click", hideCopy)
+      }, 250)
+  }
+}
+
+
+shareButton.addEventListener("click",shareClick)
+
+hideCopy = function (evt) {
+  if (!evt.target.classList.contains("keepCopy")) {
+    copyOpen = false
+    copy.parentNode.removeChild(copy)
+    document.body.removeEventListener("click", hideCopy)
+  }
+}
+
+successShown = false
+
+copyButton.addEventListener("click", function () {
+  const text = document.getElementById("copyText").innerHTML
+  var input = document.createElement('textarea');
+  input.innerHTML = text;
+  document.body.appendChild(input);
+  input.select();
+  document.execCommand('copy');
+  document.body.removeChild(input);
+  if (!successShown) {
+    successShown = true
+    const success = document.createElement("p")
+    success.innerHTML = "Success!"
+    success.id = "success"
+    document.getElementById("buttonHolder").appendChild(success)
+    setTimeout( function() {
+      success.parentNode.removeChild(success)
+      successShown = false
+    }, 1000)
+  }
+})
+
+
 function hideMainScreen() {
   document.getElementById("mainDiv").style.opacity = 0;
   document.getElementById("linkDiv").style.opacity = 0;
@@ -292,12 +446,10 @@ function showMainScreen() {
   document.body.style.backgroundColor = "rgba(159,249,176,1)"
 }
 
+showingIncorrect = false
+
 guessButton.addEventListener("click",function() {
-  window.scroll({
-    top: 0, 
-    left: 0, 
-    behavior: 'smooth' 
-  });
+  
   if (finished) {
     finished = false
     if (gameOver == "none") {
@@ -327,6 +479,11 @@ guessButton.addEventListener("click",function() {
         }
       }
       if (found == true) {
+        window.scroll({
+          top: 0, 
+          left: 0, 
+          behavior: 'smooth' 
+        });
         guess+=1;
         localStorage.setItem("guess",guess)
         document.getElementById("player"+guess).innerHTML = guessedPlayer.name;
@@ -335,10 +492,32 @@ guessButton.addEventListener("click",function() {
         inputBox.value = ""
       } else {
         finished = true
-        alert("That player is not found in our list.")
+        if (!showingIncorrect) {
+          showingIncorrect = true
+          const incorrect = document.createElement("p")
+          incorrect.innerHTML = "That player is not in our list."
+          incorrect.id = "incorrect"
+          document.getElementById("guessHolder").appendChild(incorrect)
+          setTimeout( function() {
+            incorrect.parentNode.removeChild(incorrect)
+            showingIncorrect = false
+          }, 3000)
+        }
       }
     } else {
-      alert("You have already played for today.")
+      finished = true
+      if (!showingIncorrect) {
+        showingIncorrect = true
+        console.log("hello")
+        const incorrect = document.createElement("p")
+        incorrect.innerHTML = "You have already played for today."
+        incorrect.id = "incorrect"
+        document.getElementById("guessHolder").appendChild(incorrect)
+        setTimeout( function() {
+          incorrect.parentNode.removeChild(incorrect)
+          showingIncorrect = false
+        }, 3000)
+      }
     }
   }
 })
@@ -652,6 +831,50 @@ function determineLeague() {
     if (team == randomPlayer.team) {
       randomPlayer.league = "serieA";
     }
+  }
+}
+
+function digits_count(n) {
+  var count = 0;
+  if (n >= 1) ++count;
+
+  while (n / 10 >= 1) {
+    n /= 10;
+    ++count;
+  }
+
+  return count;
+}
+
+function createShareText() {
+  var text = ""
+  var today = new Date()
+  var date = today.getMonth()+1 + "/" + today.getDate()
+  text += "Footble, "+date+"\n"
+  for (let i = 1; i < guess+1; i++) {
+    text += getEmoji(document.getElementById("teamRect"+i))
+    text += getEmoji(document.getElementById("countryRect"+i))
+    text += getEmoji(document.getElementById("numberRect"+i))
+    text += getEmoji(document.getElementById("ratingRect"+i))
+    text += getEmoji(document.getElementById("positionRect"+i))
+    text += "\n"
+  }
+  text += "www.footble-game.com"
+  return text
+}
+
+function getEmoji(rect) {
+  const backgroundColor = rect.style.backgroundColor
+  if (backgroundColor == green) {
+    return "🟩"
+  } else if (backgroundColor == yellow) {
+    return "🟨"
+  } else if (backgroundColor == red) {
+    return "🟥"
+  } else if (backgroundColor == orange) {
+    return "🟧"
+  } else if (backgroundColor == grey) {
+    return "⬛️"
   }
 }
 

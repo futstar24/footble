@@ -160,47 +160,56 @@
 		</table>
 		
 	</div>
-	<div class="horizontalDiv">
-		<form id="guessPlayer">Guess a Player: <input list = "players" type = "text" id = "inputBox"></input></form>
-			<datalist id = "players">
-				  <script>
-					const players = createPlayers()
-					const nameList = createNameList()
-					var list = document.getElementById("players");
-					nameList.sort()
-					for (name of nameList) {
-						var option = document.createElement('option');
-						option.value = name;
-						list.appendChild(option);
-					}
-				  </script>
-			</datalist>
-		  <button id="guessButton">Guess</button>
+	<div id = "guessHolder">
+		<div class="horizontalDiv">
+			<form id="guessPlayer">Guess a Player: <input list = "players" type = "text" id = "inputBox"></input></form>
+				<datalist id = "players">
+					<script>
+						const players = createPlayers()
+						const nameList = createNameList()
+						var list = document.getElementById("players");
+						nameList.sort()
+						for (name of nameList) {
+							var option = document.createElement('option');
+							option.value = name;
+							list.appendChild(option);
+						}
+					</script>
+				</datalist>
+			<button id="guessButton">Guess</button>
+		</div>
 	</div>
 	<div id = "linkDiv"><a href="https://twitter.com/MCFCjack24?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @MCFCjack24</a></div>
 	<style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#ffffff !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 23px !important;letter-spacing: 0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#ffffff !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><div id = "coffee" ><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/jlamberg"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span>Buy me a coffee</span></a></div>
 	<p id = "license">Copyright (c) 2022 Jack Lamberg</p>
-    <div class = "popup" id = "win">
-      <table id = "popupTable">
-        <tr id = "popupRow"><td id = "popupElement"><p id = "winLoseTitle">You Win!</p></td></tr>
-        <tr id = "popupRow"><td id = "popupElement"><p id = "revealwin">h</p></td></tr>
-		<tr id = "popupRow"><td id = "popupElement"><p id = "message">Come back tomorrow to play again!</p></td></tr>
-      </table>
-    </div>
-    
-    <div class = "popup" id = "lose">
-      <table id = "popupTable">
-        <tr><td id = "popupElement"><p id = "winLoseTitle">You Lose!</p></td></tr>
-        <tr><td id = "popupElement"><p id = "reveallose">h</p></td></tr>
-		<tr id = "popupRow"><td id = "popupElement"><p id = "message">Come back tomorrow to play again!</p></td></tr>
-      </table>
-    </div>
-
-	<div class = "popup" id = "none">
-		<table id = "popupTable">
-		  <tr><td id = "popupElement"><p id = "winLoseTitle">You Haven't Played Yet Today!</p></td></tr>
-		</table>
+	<!--<div id = "adDiv">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2450916735029828"
+		crossorigin="anonymous"></script>-->
+		<!-- Banner Ad -->
+		<!--<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-2450916735029828"
+			data-ad-slot="5911773823"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>-->
+	<div id = "popup">
+		<p class = "popupElement noClick" id = "winLoseTitle">You Win </p>
+		<p class = "popupElement noClick" id = "reveal">h</p>
+		<p class = "popupElement noClick" id = "message">Come back tomorrow to play again!</p>
+		<p class = "popupElement noClick" id = "time"></p>
+		<div  class = "popupElement noClick" id = "share"><button class = "popupElement noClick" id = "shareButton">Share <i class="fa-solid fa-share-nodes noClick"></i></button></div>
+		<div class = "noClick keepCopy" id = "copy">
+			<p class = "noClick keepCopy" id = "copyText">hello</p>
+			<div class = "noClick keepCopy"  id = "buttonHolder"><button class = "noClick keepCopy" id = "copyButton">Copy</button></div>
+			<div class = "noClick keepCopy"  id = "spacer"></div>
+		</div>
 	</div>
+
+	
 
 	<div id = "helpDiv">
 		<p class = "helpTitle">HELP</p>
