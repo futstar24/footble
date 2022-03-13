@@ -112,6 +112,10 @@ playerAnswers["3/13/2022"] = "Kyle Walker"
 playerAnswers["3/14/2022"] = "Mikel Oyarzabal"
 playerAnswers["3/15/2022"] = "Pierre-Emerick Aubameyang"
 playerAnswers["3/16/2022"] = "Lorenzo Insigne"
+playerAnswers["3/17/2022"] = "Duvan Zapata"
+playerAnswers["3/18/2022"] = "Fernandinho"
+playerAnswers["3/19/2022"] = "Kevin Volland"
+
 
 
 var randomPlayer = ""
@@ -322,6 +326,8 @@ document.getElementById("iconDiv").addEventListener("click",function(){
 function showWinOrLose(popup) {
   element.style.visibility = "visible";
   if (popup != "none") {
+    reveal.innerHTML = "The player was " + randomPlayer.name + "!"
+    element.appendChild(reveal)
     element.appendChild(message)
     element.appendChild(time)
     if (popup == "win") {
