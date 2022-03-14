@@ -1,5 +1,4 @@
 const navigator = window.navigator
-console.log(navigator)
 
 var guess = parseInt(localStorage.getItem("guess"));
 
@@ -124,14 +123,12 @@ var randomPlayer = ""
 const today = new Date()
 const date = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear()
 var randomPlayerName = playerAnswers[date]
-console.log(randomPlayerName)
 for (player of players) {
   if (player.name == randomPlayerName) {
     randomPlayer = player
     break
   }
 }
-console.log(randomPlayer.name);
 determineContinent();
 determineLeague();
 
@@ -158,7 +155,6 @@ createBoxes("positionRect")
 function createBoxes(rectName) {
   for(var rectNum = 1; rectNum < 7; rectNum++) {
     var items = localStorage.getItem(rectName+rectNum).split(",")
-    console.log(items)
     var rect = document.getElementById(rectName+rectNum)
     rect.style.backgroundColor = items[1]+","+items[2]+","+items[3]
     if(items[0] != "") {
@@ -171,7 +167,6 @@ function createBoxes(rectName) {
 
 night = 0
 
-console.log(document.body.style.height)
 resetAtMidnight()
 
 function resetAtMidnight() {
@@ -182,10 +177,7 @@ function resetAtMidnight() {
     night.setMinutes(0)
     night.setSeconds(0)
     night.setMilliseconds(0)
-    console.log(night.getTime())
-    console.log(now.getTime())
     msToMidnight = night.getTime() - now.getTime();
-    console.log(msToMidnight)
     setTimeout(function() {
       reset();
       resetAtMidnight();
@@ -260,7 +252,6 @@ function saveBoxes(rectName) {
     var text = ""
     try {
       text = rect.firstChild.innerText
-      console.log("success")
     } catch (error) {
     }
     localStorage.setItem((rectName+rectNum),[text,rect.style.backgroundColor])
@@ -268,14 +259,9 @@ function saveBoxes(rectName) {
   }
 }
 
-document.body.addEventListener("click", function (evt) {
-  console.log(evt.target)
-})
-
 statsStillClosing = false
 
 document.getElementById("statsDiv").addEventListener("click",function(){
-  console.log(statsOpen)
   if (!statsStillClosing) {
     if (statsOpen) {
       document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
@@ -376,14 +362,12 @@ copyOpen = false
 shareClick = function (evt) {
   
   if(!copyOpen) {
-    console.log(evt)
     var text = createShareText()
     if (navigator.share) {
       navigator.share({
         title: 'Footble',
         text: text,
       }).then(() => {
-        console.log('Thanks for sharing!');
       })
       .catch(console.error);
     }
@@ -514,7 +498,6 @@ guessButton.addEventListener("click",function() {
       finished = true
       if (!showingIncorrect) {
         showingIncorrect = true
-        console.log("hello")
         const incorrect = document.createElement("p")
         incorrect.innerHTML = "You have already played for today."
         incorrect.id = "incorrect"
@@ -573,7 +556,6 @@ function createText(text,rect) {
   const textBox = document.createElement("p")
   textBox.innerText = text
   rect.appendChild(textBox)
-  console.log(rect.childElementCount)
   textBox.id = "boxText"
 }
 
@@ -642,7 +624,6 @@ function compareNumber(yourNumber) {
 }
 
 function compareCountry(yourCountry) {
-  console.log(yourCountry);
   const rect = document.getElementById("countryRect"+guess)
   rect.style.animation = rotateBox
   setTimeout(function() {
@@ -715,7 +696,6 @@ function compareCountry(yourCountry) {
 }
 
 function compareTeam(yourTeam) {
-  console.log(yourTeam);
   const rect = document.getElementById("teamRect"+guess)
   rect.style.animation = rotateBox
   setTimeout(function() {
