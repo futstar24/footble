@@ -59,7 +59,7 @@ const prem = ["Arsenal", "Brentford", "Manchester City", "Liverpool", "Chelsea",
 
 const bundes = ["Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "RB Leipzig", "Hoffenheim", "SC Freiburg","1. FC Union Berlin","1. FC Koln","1. FSV Mainz 05","Eintracht Frankfurt","Vfl Bochum","Vfl Wolfsburg","M'Gladbach","Hertha BSC","Arminia Bielefeld","Augsburg","VfB Stuttgart","SpVgg G. Furth"];
 
-const laliga = ["Real Madrid","Sevilla","Real Betis","Barcelona","Athletico Madrid","Real Sociedad","Villareal","Athletic Club","Osasuna","Celta Vigo","Rayo Vallecano","Valencia","RCD Espanyol","Elche","Real Mallorca","Getafe","Granada","Alaves","Cadiz","Levante"]
+const laliga = ["Real Madrid","Sevilla","Real Betis","Barcelona","Athletico Madrid","Real Sociedad","Villarreal","Athletic Club","Osasuna","Celta Vigo","Rayo Vallecano","Valencia","RCD Espanyol","Elche","Real Mallorca","Getafe","Granada","Alaves","Cadiz","Levante"]
 
 const ligue1 = ["PSG","Olympique de Marseille","Nice","Strasbourg","Rennes","Monaco","Olympique Lyonnais","Lens","Nantes","Lille","Montpellier","Brest","Angers","Reims","Clermont","Troyes","FC Lorient","Saint-Etienne","Metz","Bordeaux"]
 
@@ -253,8 +253,6 @@ const yellow = "rgb(179, 173, 18)"
 const orange = "rgb(189, 118, 19)"
 const red = "rgb(189, 19, 19)"
 const grey = "rgb(87, 87, 87)"
-
-showWinOrLose(gameOver)
 
 function saveBoxes(rectName) {
   for(var rectNum = 1; rectNum < 7; rectNum++) {
