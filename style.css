@@ -6,10 +6,6 @@
 
 @media only screen and (max-width: 750px) {
 
-  #tableDiv {
-    margin-left: -12px;
-  }
-
   #playerNamesTable th{
     height: 8vw;
   } 
