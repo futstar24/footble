@@ -116,6 +116,11 @@ playerAnswers["3/16/2022"] = "Lorenzo Insigne"
 playerAnswers["3/17/2022"] = "Duvan Zapata"
 playerAnswers["3/18/2022"] = "Fernandinho"
 playerAnswers["3/19/2022"] = "Kevin Volland"
+playerAnswers["3/20/2022"] = "Alvaro Morata"
+playerAnswers["3/21/2022"] = "Felipe"
+playerAnswers["3/22/2022"] = "Mateo Kovacic"
+playerAnswers["3/23/2022"] = "Marc-Andre ter Stegen"
+playerAnswers["3/24/2022"] = "Kasper Schmeichel"
 
 
 
