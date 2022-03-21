@@ -121,6 +121,12 @@ playerAnswers["3/21/2022"] = "Felipe"
 playerAnswers["3/22/2022"] = "Mateo Kovacic"
 playerAnswers["3/23/2022"] = "Marc-Andre ter Stegen"
 playerAnswers["3/24/2022"] = "Kasper Schmeichel"
+playerAnswers["3/25/2022"] = "Mason Mount"
+playerAnswers["3/26/2022"] = "Dani Carvajal"
+playerAnswers["3/27/2022"] = "Karim Benzema"
+playerAnswers["3/28/2022"] = "Georginio Wijnaldum"
+playerAnswers["3/29/2022"] = "Thomas Partey"
+playerAnswers["3/30/2022"] = "Edison Cavani"
 
 
 
