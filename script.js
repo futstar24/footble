@@ -127,6 +127,16 @@ playerAnswers["3/27/2022"] = "Karim Benzema"
 playerAnswers["3/28/2022"] = "Georginio Wijnaldum"
 playerAnswers["3/29/2022"] = "Thomas Partey"
 playerAnswers["3/30/2022"] = "Edison Cavani"
+playerAnswers["3/31/2022"] = "Iker Muniain"
+playerAnswers["4/1/2022"] = "Jose Gimenez"
+playerAnswers["4/2/2022"] = "Franck Kessie"
+playerAnswers["4/3/2022"] = "Wissam Ben Yedder"
+playerAnswers["4/4/2022"] = "Nabil Fekir"
+playerAnswers["4/5/2022"] = "John Stones"
+playerAnswers["4/6/2022"] = "Riyad Mahrez"
+playerAnswers["4/7/2022"] = "Dani Carvajal"
+
+
 
 
 
