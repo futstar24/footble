@@ -6,7 +6,7 @@ Instead of judging the letters of the player guessed, I judge the soccer players
 I used html, css, and java to create this project to be able to put in on the web.
 Use the project by going to www.footble-game.com.
 Credits:
-James Dibenedetto, Brandon Berkoff, Max Lamberg
+James Dibenedetto, Brandon Berkoff, Max Lamberg, Mateo DeLeòn
 
 MIT License
 
