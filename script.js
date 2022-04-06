@@ -134,7 +134,12 @@ playerAnswers["4/3/2022"] = "Wissam Ben Yedder"
 playerAnswers["4/4/2022"] = "Nabil Fekir"
 playerAnswers["4/5/2022"] = "John Stones"
 playerAnswers["4/6/2022"] = "Riyad Mahrez"
-playerAnswers["4/7/2022"] = "Dani Carvajal"
+playerAnswers["4/7/2022"] = "Simon Kjaer"
+playerAnswers["4/8/2022"] = "Lauturo Martinez"
+playerAnswers["4/9/2022"] = "Eden Hazard"
+playerAnswers["4/10/2022"] = "Erling Haaland"
+playerAnswers["4/11/2022"] = "Hakim Ziyech"
+playerAnswers["4/12/2022"] = "Axel Witsel"
 
 
 
