@@ -140,7 +140,18 @@ playerAnswers["4/9/2022"] = "Eden Hazard"
 playerAnswers["4/10/2022"] = "Erling Haaland"
 playerAnswers["4/11/2022"] = "Hakim Ziyech"
 playerAnswers["4/12/2022"] = "Axel Witsel"
-
+playerAnswers["4/13/2022"] = "Thibaut Courtois"
+playerAnswers["4/14/2022"] = "Luke Shaw"
+playerAnswers["4/15/2022"] = "Jordan Pickford"
+playerAnswers["4/16/2022"] = "Timo Werner"
+playerAnswers["4/17/2022"] = "Sergej Milinkovic-Savic"
+playerAnswers["4/18/2022"] = "Virgil Van Dijk"
+playerAnswers["4/19/2022"] = "Joshua Kimmich"
+playerAnswers["4/20/2022"] = "Pierre-Emile Hojbjerg"
+playerAnswers["4/21/2022"] = "Robin Gosens"
+playerAnswers["4/22/2022"] = "Jesus Navas"
+playerAnswers["4/23/2022"] = "Jordi Alba"
+playerAnswers["4/24/2022"] = "Edouard Mendy"
 
 
 
