@@ -152,6 +152,15 @@ playerAnswers["4/21/2022"] = "Robin Gosens"
 playerAnswers["4/22/2022"] = "Jesus Navas"
 playerAnswers["4/23/2022"] = "Jordi Alba"
 playerAnswers["4/24/2022"] = "Edouard Mendy"
+playerAnswers["4/25/2022"] = "Raphael Varane"
+playerAnswers["4/26/2022"] = "Ilkay Gundogan"
+playerAnswers["4/27/2022"] = "Gerard Pique"
+playerAnswers["4/28/2022"] = "Bruno Fernandes"
+playerAnswers["4/29/2022"] = "Yann Sommer"
+playerAnswers["4/30/2022"] = "Andrew Robertson"
+playerAnswers["5/1/2022"] = "Mason Mount"
+playerAnswers["5/2/2022"] = "Joel Matip"
+
 
 
 
