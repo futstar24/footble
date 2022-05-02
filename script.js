@@ -160,6 +160,17 @@ playerAnswers["4/29/2022"] = "Yann Sommer"
 playerAnswers["4/30/2022"] = "Andrew Robertson"
 playerAnswers["5/1/2022"] = "Mason Mount"
 playerAnswers["5/2/2022"] = "Joel Matip"
+playerAnswers["5/3/2022"] = "Phil Foden"
+playerAnswers["5/4/2022"] = "Stefan Savic"
+playerAnswers["5/5/2022"] = "Zlatan Ibrahimovic"
+playerAnswers["5/6/2022"] = "Alex Sandro"
+playerAnswers["5/7/2022"] = "Henrikh Mkhitaryan"
+playerAnswers["5/8/2022"] = "Aaron Wan-Bissaka"
+playerAnswers["5/9/2022"] = "Stefan de Vrig"
+playerAnswers["5/10/2022"] = "David Silva"
+playerAnswers["5/11/2022"] = "Samir Handanovic"
+playerAnswers["5/12/2022"] = "Jan Oblak"
+
 
 
 
