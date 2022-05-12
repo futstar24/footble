@@ -170,6 +170,18 @@ playerAnswers["5/9/2022"] = "Stefan de Vrig"
 playerAnswers["5/10/2022"] = "David Silva"
 playerAnswers["5/11/2022"] = "Samir Handanovic"
 playerAnswers["5/12/2022"] = "Jan Oblak"
+playerAnswers["5/13/2022"] = "Marco Verratti"
+playerAnswers["5/14/2022"] = "Joao Felix"
+playerAnswers["5/15/2022"] = "Ousmane Dembele"
+playerAnswers["5/16/2022"] = "Filip Kostic"
+playerAnswers["5/17/2022"] = "Heung Min Son"
+playerAnswers["5/18/2022"] = "Sergio Ramos"
+playerAnswers["5/19/2022"] = "Antoine Griezmann"
+playerAnswers["5/20/2022"] = "Angel Correa"
+playerAnswers["5/21/2022"] = "Federico Valverde"
+playerAnswers["5/22/2022"] = "Matthais Ginter"
+playerAnswers["5/23/2022"] = "Toni Kroos"
+playerAnswers["5/24/2022"] = "Lionel Messi"
 
 
 
