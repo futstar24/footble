@@ -56,7 +56,7 @@ const oceania = ["Australia","New Zealand"]
 
 const prem = ["Arsenal", "Brentford", "Manchester City", "Liverpool", "Chelsea", "Manchester United", "West Ham", "Arsenal", "Wolves", "Tottenham", "Brighton & Hove Albion", "Southhampton", "Leicester City", "Aston Villa", "Crystal Palace", "Leeds United", "Everton", "Newcastle United", "Norwich City", "Watford", "Burnley"];
 
-const bundes = ["Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "RB Leipzig", "Hoffenheim", "SC Freiburg","1. FC Union Berlin","1. FC Koln","1. FSV Mainz 05","Eintracht Frankfurt","Vfl Bochum","Vfl Wolfsburg","M'Gladbach","Hertha BSC","Arminia Bielefeld","Augsburg","VfB Stuttgart","SpVgg G. Furth"];
+const bundes = ["Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "RB Leipzig", "Hoffenheim", "SC Freiburg","1. FC Union Berlin","1. FC Koln","1. FSV Mainz 05","Frankfurt","Vfl Bochum","Vfl Wolfsburg","M'Gladbach","Hertha BSC","Arminia Bielefeld","Augsburg","VfB Stuttgart","SpVgg G. Furth"];
 
 const laliga = ["Real Madrid","Sevilla","Real Betis","Barcelona","Athletico Madrid","Real Sociedad","Villarreal","Athletic Club","Osasuna","Celta Vigo","Rayo Vallecano","Valencia","RCD Espanyol","Elche","Real Mallorca","Getafe","Granada","Alaves","Cadiz","Levante"]
 
@@ -183,26 +183,26 @@ playerAnswers["5/22/2022"] = "Matthais Ginter"
 playerAnswers["5/23/2022"] = "Toni Kroos"
 playerAnswers["5/24/2022"] = "Lionel Messi"
 playerAnswers["5/25/2022"] = "Fernando"
-playerAnswers["5/26/2022"] = "Alex Sandro"
-playerAnswers["5/27/2022"] = "Henrikh Mkhitaryan"
-playerAnswers["5/28/2022"] = "Aaron Wan-Bissaka"
-playerAnswers["5/29/2022"] = "Stefan de Vrig"
-playerAnswers["5/30/2022"] = "David Silva"
-playerAnswers["5/31/2022"] = "David Silva"
-playerAnswers["6/1/2022"] = "Samir Handanovic"
-playerAnswers["6/2/2022"] = "Jan Oblak"
-playerAnswers["6/3/2022"] = "Marco Verratti"
-playerAnswers["6/4/2022"] = "Joao Felix"
-playerAnswers["6/5/2022"] = "Ousmane Dembele"
-playerAnswers["6/6/2022"] = "Filip Kostic"
-playerAnswers["6/7/2022"] = "Heung Min Son"
-playerAnswers["6/8/2022"] = "Sergio Ramos"
-playerAnswers["6/9/2022"] = "Antoine Griezmann"
-playerAnswers["6/10/2022"] = "Angel Correa"
-playerAnswers["6/11/2022"] = "Federico Valverde"
-playerAnswers["6/12/2022"] = "Matthais Ginter"
-playerAnswers["6/13/2022"] = "Toni Kroos"
-playerAnswers["6/14/2022"] = "Lionel Messi"
+playerAnswers["5/26/2022"] = "Francesco Acerbi"
+playerAnswers["5/27/2022"] = "Angelino"
+playerAnswers["5/28/2022"] = "Marcel Sabitzer"
+playerAnswers["5/29/2022"] = "Marcos Llorente"
+playerAnswers["5/30/2022"] = "Peter Gulacsi"
+playerAnswers["5/31/2022"] = "Ilkay Gundogan"
+playerAnswers["6/1/2022"] = "Alisson Becker"
+playerAnswers["6/2/2022"] = "Kevin De Bruyne"
+playerAnswers["6/3/2022"] = "Nicolo Barella"
+playerAnswers["6/4/2022"] = "Marco Asensio"
+playerAnswers["6/5/2022"] = "Harry Maguire"
+playerAnswers["6/6/2022"] = "Leonardo Spinazzola"
+playerAnswers["6/7/2022"] = "Cesar Azpilicueta"
+playerAnswers["6/8/2022"] = "Joao Felix"
+playerAnswers["6/9/2022"] = "Jadon Sancho"
+playerAnswers["6/10/2022"] = "Daniel Parejo"
+playerAnswers["6/11/2022"] = "Matthijs De Ligt"
+playerAnswers["6/12/2022"] = "Ciro Immobile"
+playerAnswers["6/13/2022"] = "Thomas Muller"
+playerAnswers["6/14/2022"] = "Frenkie De Jong"
 
 
 
