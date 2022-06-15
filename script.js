@@ -203,6 +203,16 @@ playerAnswers["6/11/2022"] = "Matthijs De Ligt"
 playerAnswers["6/12/2022"] = "Ciro Immobile"
 playerAnswers["6/13/2022"] = "Thomas Muller"
 playerAnswers["6/14/2022"] = "Frenkie De Jong"
+playerAnswers["6/15/2022"] = "Peter Gulacsi"
+playerAnswers["6/16/2022"] = "Marcos Llorente"
+playerAnswers["6/17/2022"] = "Jan Oblak"
+playerAnswers["6/18/2022"] = "Antoine Griezmann"
+playerAnswers["6/19/2022"] = "Luis Suarez"
+playerAnswers["6/20/2022"] = "Toni Kroos"
+playerAnswers["6/21/2022"] = "Marcelo Brozovich"
+playerAnswers["6/22/2022"] = "Wissam Ben Yedder"
+playerAnswers["6/23/2022"] = "Nabil Fekir"
+playerAnswers["6/24/2022"] = "Lucas Hernandez"
 
 
 
