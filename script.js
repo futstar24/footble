@@ -277,6 +277,7 @@ playerAnswers["9/1/2022"] = "Marcelo Brozovich"
 playerAnswers["9/2/2022"] = "Timo Werner"
 playerAnswers["9/3/2022"] = "Jack Grealish"
 playerAnswers["9/4/2022"] = "Daniel Parejo"
+playerAnswers["10/12/2022"] = "Daniel Parejo"
 
 
 
