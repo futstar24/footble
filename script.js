@@ -1,3 +1,4 @@
+reset()
 const navigator = window.navigator
 
 var guess = parseInt(localStorage.getItem("guess"));
