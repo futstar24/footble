@@ -92,7 +92,7 @@ if (localStorage.getItem("player6") == null) {
 
 statsOpen = false
 var gameOver = (localStorage.getItem("gameOver"))
-//reset()
+reset()
 document.getElementById("player1").innerHTML = localStorage.getItem("player1")
 document.getElementById("player2").innerHTML = localStorage.getItem("player2")
 document.getElementById("player3").innerHTML = localStorage.getItem("player3")
