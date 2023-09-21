@@ -42,7 +42,7 @@ function removePopupElements() {
   }
 }
 
-const europe = ["England","Wales","Ireland","France","Germany","Belgium","Poland","Spain","Portugal","Italy","Netherlands","Greece","Finland","Lithuania","Slovakia","Malta","Monaco","Cyprus","Luxembourg","Montenegro","Slovenia","Scotland","Kosovo","Latvia","Estonia","Andorra","Vatican City","Albania","Armenia","Austria","Azerbaijan","Belarus","Bosnia and Herzegovina","Bulgaria","Croatia","Czechia","Denmark","Georgia","Hungary","Iceland","Kazakhstan","Liechtenstein","Moldova","North Macedonia","Norway","Romania","Russia","San Marino","Serbia","Sweden","Switzerland","Turkey","Ukraine"];
+const europe = ["England","Bosnia","Wales","Ireland","France","Germany","Belgium","Poland","Spain","Portugal","Italy","Netherlands","Greece","Finland","Lithuania","Slovakia","Malta","Monaco","Cyprus","Luxembourg","Montenegro","Slovenia","Scotland","Kosovo","Latvia","Estonia","Andorra","Vatican City","Albania","Armenia","Austria","Azerbaijan","Belarus","Bosnia and Herzegovina","Bulgaria","Croatia","Czechia","Denmark","Georgia","Hungary","Iceland","Kazakhstan","Liechtenstein","Moldova","North Macedonia","Norway","Romania","Russia","San Marino","Serbia","Sweden","Switzerland","Turkey","Ukraine"];
 
 const africa = ["Egypt","Algeria","Mali","Senegal","Nigeria","Ethiopia","Democratic Republic of the Congo","Tanzania","South Africa","Kenya","Uganda","Sudan","Morocco","Angola","Mozambique","Ghana","Madagascar","Cameroon","Ivory Coast","Niger","Burkina Faso","Malawi","Zambia","Chad","Somalia","Zimbabwe","Guinea","Rwanda","Benin","Burundi","Tunisia","South Sudan","Togo","Sierra Leone","Libya","Congo","Liberia","Central African Republic","Mauritania","Eritrea","Namibia","Gambia","Botswana","Gabon","Lesotho","Guinea-Bissau","Equatorial Guinea","Mauritius","Eswatini","Djibouti","Comoros","Cabo Verde","Sao Tome & Principe","Seychelles"];
 
@@ -63,6 +63,14 @@ const laliga = ["Real Madrid","Sevilla","Real Betis","Barcelona","Athletico Madr
 const ligue1 = ["PSG","Olympique de Marseille","Nice","Strasbourg","Rennes","AS Monaco","Olympique Lyonnais","Lens","Nantes","Lille","Montpellier","Brest","Angers","Reims","Clermont","Troyes","FC Lorient","Saint-Etienne","Metz","Bordeaux"]
 
 const serieA = ["Milan","Inter","Napoli","Juventus","Atalanta","Lazio","Roma","Fiorentina","Hellas Verona","Torino","Empoli","Sassuolo","Bologna","Spezia","Udinese","Sampdoria","Venezia","Cagliari","Genoa","Salernitana"]
+
+const mls = ["Miami"]
+
+const saudi = ["Al Nassr","Al Hilal","Al Shabab","Al Ittihad","Al Ahli"]
+
+const turkey = ["Fenerbahce"]
+
+const portugal = ["Benfica"]
 
 if (localStorage.getItem("guess") == null) {
   localStorage.setItem("guess",0)
@@ -102,171 +110,6 @@ document.getElementById("player6").innerHTML = localStorage.getItem("player6")
 
 const playerAnswers = {}
 
-playerAnswers["10/17/2022"] = "Mohammed Salah"
-playerAnswers["10/18/2022"] = "Harry Kane"
-playerAnswers["10/19/2022"] = "Sergio Busquets"
-playerAnswers["10/20/2022"] = "Hugo Lloris"
-playerAnswers["10/21/2022"] = "Paulo Dybala"
-playerAnswers["10/22/2022"] = "Joao Cancelo"
-playerAnswers["10/23/2022"] = "Wojciech Szczesny"
-playerAnswers["10/24/2022"] = "Marquinhos"
-playerAnswers["10/25/2022"] = "Kyle Walker"
-playerAnswers["10/26/2022"] = "Mikel Oyarzabal"
-playerAnswers["10/27/2022"] = "Pierre-Emerick Aubameyang"
-playerAnswers["10/28/2022"] = "Lorenzo Insigne"
-playerAnswers["10/29/2022"] = "Duvan Zapata"
-playerAnswers["10/30/2022"] = "Fernandinho"
-playerAnswers["10/31/2022"] = "Kevin Volland"
-playerAnswers["11/1/2022"] = "Alvaro Morata"
-playerAnswers["11/2/2022"] = "Felipe"
-playerAnswers["11/3/2022"] = "Mateo Kovacic"
-playerAnswers["11/4/2022"] = "Marc-Andre ter Stegen"
-playerAnswers["11/5/2022"] = "Kasper Schmeichel"
-playerAnswers["11/6/2022"] = "Mason Mount"
-playerAnswers["11/7/2022"] = "Dani Carvajal"
-playerAnswers["11/8/2022"] = "Karim Benzema"
-playerAnswers["11/9/2022"] = "Georginio Wijnaldum"
-playerAnswers["11/10/2022"] = "Thomas Partey"
-playerAnswers["11/11/2022"] = "Edison Cavani"
-playerAnswers["11/12/2022"] = "Iker Muniain"
-playerAnswers["11/13/2022"] = "Jose Gimenez"
-playerAnswers["11/14/2022"] = "Franck Kessie"
-playerAnswers["11/15/2022"] = "Wissam Ben Yedder"
-playerAnswers["11/16/2022"] = "Nabil Fekir"
-playerAnswers["11/17/2022"] = "John Stones"
-playerAnswers["11/18/2022"] = "Riyad Mahrez"
-playerAnswers["11/19/2022"] = "Simon Kjaer"
-playerAnswers["11/20/2022"] = "Lauturo Martinez"
-playerAnswers["11/21/2022"] = "Eden Hazard"
-playerAnswers["11/22/2022"] = "Erling Haaland"
-playerAnswers["11/23/2022"] = "Hakim Ziyech"
-playerAnswers["11/24/2022"] = "Axel Witsel"
-playerAnswers["11/25/2022"] = "Thibaut Courtois"
-playerAnswers["11/26/2022"] = "Luke Shaw"
-playerAnswers["11/27/2022"] = "Jordan Pickford"
-playerAnswers["11/28/2022"] = "Timo Werner"
-playerAnswers["11/29/2022"] = "Sergej Milinkovic-Savic"
-playerAnswers["11/30/2022"] = "Virgil Van Dijk"
-playerAnswers["12/1/2022"] = "Joshua Kimmich"
-playerAnswers["12/2/2022"] = "Pierre-Emile Hojbjerg"
-playerAnswers["12/3/2022"] = "Robin Gosens"
-playerAnswers["12/4/2022"] = "Jesus Navas"
-playerAnswers["12/5/2022"] = "Jordi Alba"
-playerAnswers["12/6/2022"] = "Edouard Mendy"
-playerAnswers["12/7/2022"] = "Raphael Varane"
-playerAnswers["12/8/2022"] = "Ilkay Gundogan"
-playerAnswers["12/9/2022"] = "Gerard Pique"
-playerAnswers["12/10/2022"] = "Bruno Fernandes"
-playerAnswers["12/11/2022"] = "Yann Sommer"
-playerAnswers["12/12/2022"] = "Andrew Robertson"
-playerAnswers["12/13/2022"] = "Mason Mount"
-playerAnswers["12/14/2022"] = "Joel Matip"
-playerAnswers["12/15/2022"] = "Phil Foden"
-playerAnswers["12/16/2022"] = "Stefan Savic"
-playerAnswers["12/17/2022"] = "Zlatan Ibrahimovic"
-playerAnswers["12/18/2022"] = "Alex Sandro"
-playerAnswers["12/19/2022"] = "Henrikh Mkhitaryan"
-playerAnswers["12/20/2022"] = "Aaron Wan-Bissaka"
-playerAnswers["12/21/2022"] = "Stefan de Vrig"
-playerAnswers["12/22/2022"] = "David Silva"
-playerAnswers["12/23/2022"] = "Samir Handanovic"
-playerAnswers["12/24/2022"] = "Jan Oblak"
-playerAnswers["12/25/2022"] = "Marco Verratti"
-playerAnswers["12/26/2022"] = "Joao Felix"
-playerAnswers["12/27/2022"] = "Ousmane Dembele"
-playerAnswers["12/28/2022"] = "Filip Kostic"
-playerAnswers["12/29/2022"] = "Heung Min Son"
-playerAnswers["12/30/2022"] = "Sergio Ramos"
-playerAnswers["12/31/2022"] = "Antoine Griezmann"
-playerAnswers["1/1/2023"] = "Alisson Becker"
-playerAnswers["1/2/2023"] = "Kevin De Bruyne"
-playerAnswers["1/3/2023"] = "Nicolo Barella"
-playerAnswers["1/4/2023"] = "Marco Asensio"
-playerAnswers["1/5/2023"] = "Harry Maguire"
-playerAnswers["1/6/2023"] = "Leonardo Spinazzola"
-playerAnswers["1/7/2023"] = "Cesar Azpilicueta"
-playerAnswers["1/8/2023"] = "Joao Felix"
-playerAnswers["1/9/2023"] = "Jadon Sancho"
-playerAnswers["1/10/2023"] = "Daniel Parejo"
-playerAnswers["1/11/2023"] = "Matthijs De Ligt"
-playerAnswers["1/12/2023"] = "Ciro Immobile"
-playerAnswers["1/13/2023"] = "Thomas Muller"
-playerAnswers["1/14/2023"] = "Frenkie De Jong"
-playerAnswers["1/15/2023"] = "Peter Gulacsi"
-playerAnswers["1/16/2023"] = "Marcos Llorente"
-playerAnswers["1/17/2023"] = "Jan Oblak"
-playerAnswers["1/18/2023"] = "Antoine Griezmann"
-playerAnswers["1/19/2023"] = "Luis Suarez"
-playerAnswers["1/20/2023"] = "Toni Kroos"
-playerAnswers["1/21/2023"] = "Marcelo Brozovich"
-playerAnswers["1/22/2023"] = "Wissam Ben Yedder"
-playerAnswers["1/23/2023"] = "Nabil Fekir"
-playerAnswers["1/24/2023"] = "Lucas Hernandez"
-playerAnswers["1/25/2023"] = "Heung Min Son"
-playerAnswers["1/26/2023"] = "Kingsley Coman"
-playerAnswers["1/27/2023"] = "Ruben Dias"
-playerAnswers["1/28/2023"] = "Jamie Vardy"
-playerAnswers["1/29/2023"] = "Kalidou Koulibaly"
-playerAnswers["1/30/2023"] = "Yannick Carrasco"
-playerAnswers["1/31/2023"] = "Angel Correa"
-playerAnswers["2/1/2023"] = "Marco Verratti"
-playerAnswers["2/2/2023"] = "Felipe"
-playerAnswers["2/3/2023"] = "Mateo Kovacic"
-playerAnswers["2/4/2023"] = "Marc-Andre ter Stegen"
-playerAnswers["2/5/2023"] = "Kasper Schmeichel"
-playerAnswers["2/6/2023"] = "Mason Mount"
-playerAnswers["2/7/2023"] = "Dani Carvajal"
-playerAnswers["2/8/2023"] = "Karim Benzema"
-playerAnswers["2/9/2023"] = "Georginio Wijnaldum"
-playerAnswers["2/10/2023"] = "Thomas Partey"
-playerAnswers["2/11/2023"] = "Edison Cavani"
-playerAnswers["2/12/2023"] = "Iker Muniain"
-playerAnswers["2/13/2023"] = "Jose Gimenez"
-playerAnswers["2/14/2023"] = "Franck Kessie"
-playerAnswers["2/15/2023"] = "Wissam Ben Yedder"
-playerAnswers["2/16/2023"] = "Nabil Fekir"
-playerAnswers["2/17/2023"] = "John Stones"
-playerAnswers["2/18/2023"] = "Riyad Mahrez"
-playerAnswers["2/19/2023"] = "Simon Kjaer"
-playerAnswers["2/20/2023"] = "Lauturo Martinez"
-playerAnswers["2/21/2023"] = "Eden Hazard"
-playerAnswers["2/22/2023"] = "Erling Haaland"
-playerAnswers["2/23/2023"] = "Hakim Ziyech"
-playerAnswers["2/24/2023"] = "Axel Witsel"
-playerAnswers["2/25/2023"] = "Thibaut Courtois"
-playerAnswers["2/26/2023"] = "Luke Shaw"
-playerAnswers["2/27/2023"] = "Jordan Pickford"
-playerAnswers["2/28/2023"] = "Timo Werner"
-playerAnswers["3/1/2023"] = "Joshua Kimmich"
-playerAnswers["3/2/2023"] = "Pierre-Emile Hojbjerg"
-playerAnswers["3/3/2023"] = "Robin Gosens"
-playerAnswers["3/4/2023"] = "Jesus Navas"
-playerAnswers["3/5/2023"] = "Jordi Alba"
-playerAnswers["3/6/2023"] = "Edouard Mendy"
-playerAnswers["3/7/2023"] = "Raphael Varane"
-playerAnswers["3/8/2023"] = "Ilkay Gundogan"
-playerAnswers["3/9/2023"] = "Gerard Pique"
-playerAnswers["3/10/2023"] = "Bruno Fernandes"
-playerAnswers["3/11/2023"] = "Yann Sommer"
-playerAnswers["3/12/2023"] = "Andrew Robertson"
-playerAnswers["3/13/2023"] = "Mason Mount"
-playerAnswers["3/14/2023"] = "Joel Matip"
-playerAnswers["3/15/2023"] = "Phil Foden"
-playerAnswers["3/16/2023"] = "Stefan Savic"
-playerAnswers["3/17/2023"] = "Zlatan Ibrahimovic"
-playerAnswers["3/18/2023"] = "Alex Sandro"
-playerAnswers["3/19/2023"] = "Henrikh Mkhitaryan"
-playerAnswers["3/20/2023"] = "Aaron Wan-Bissaka"
-playerAnswers["3/21/2023"] = "Stefan de Vrig"
-playerAnswers["3/22/2023"] = "David Silva"
-playerAnswers["3/23/2023"] = "Samir Handanovic"
-playerAnswers["3/24/2023"] = "Jan Oblak"
-playerAnswers["3/25/2023"] = "Marco Verratti"
-playerAnswers["3/26/2023"] = "Joao Felix"
-playerAnswers["3/27/2023"] = "Ousmane Dembele"
-playerAnswers["3/28/2023"] = "Filip Kostic"
-playerAnswers["3/29/2023"] = "Heung Min Son"
-playerAnswers["3/30/2023"] = "Sergio Ramos"
 playerAnswers["9/21/2023"] = "Bremer"
 
 var randomPlayer = ""
@@ -879,6 +722,38 @@ function compareTeam(yourTeam) {
             }
           }
           break;
+        case "mls":
+          for (team of mls) {
+            if (yourTeam == team) {
+              correct = true;
+              break;
+            }
+          }
+          break;
+        case "saudi":
+          for (team of saudi) {
+            if (yourTeam == team) {
+              correct = true;
+              break;
+            }
+          }
+          break;
+        case "turkey":
+          for (team of turkey) {
+            if (yourTeam == team) {
+              correct = true;
+              break;
+            }
+          }
+          break;
+        case "portugal":
+          for (team of portugal) {
+            if (yourTeam == team) {
+              correct = true;
+              break;
+            }
+          }
+          break;
         case "ligue1":
           for (team of ligue1) {
             if (yourTeam == team) {
@@ -966,6 +841,26 @@ function determineLeague() {
   for(team of serieA) {
     if (team == randomPlayer.team) {
       randomPlayer.league = "serieA";
+    }
+  }
+  for(team of mls) {
+    if (team == randomPlayer.team) {
+      randomPlayer.league = "mls";
+    }
+  }
+  for(team of saudi) {
+    if (team == randomPlayer.team) {
+      randomPlayer.league = "saudi";
+    }
+  }
+  for(team of turkey) {
+    if (team == randomPlayer.team) {
+      randomPlayer.league = "turkey";
+    }
+  }
+  for(team of portugal) {
+    if (team == randomPlayer.team) {
+      randomPlayer.league = "portugal";
     }
   }
 }
