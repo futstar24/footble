@@ -111,6 +111,7 @@ document.getElementById("player6").innerHTML = localStorage.getItem("player6")
 const playerAnswers = {}
 
 playerAnswers["9/21/2023"] = "Bremer"
+playerAnswers["9/22/2023"] = "Erling Haaland"
 
 var randomPlayer = ""
 const today = new Date()
