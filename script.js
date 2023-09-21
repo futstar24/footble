@@ -267,7 +267,6 @@ playerAnswers["3/27/2023"] = "Ousmane Dembele"
 playerAnswers["3/28/2023"] = "Filip Kostic"
 playerAnswers["3/29/2023"] = "Heung Min Son"
 playerAnswers["3/30/2023"] = "Sergio Ramos"
-playerAnswers["9/7/2023"] = "Antoine Griezmann"
 
 var randomPlayer = ""
 const today = new Date()
