@@ -54,7 +54,7 @@ const asia = ["Russia","China","Japan","South Korea","India","Indonesia","Pakist
 
 const oceania = ["Australia","New Zealand"]
 
-const prem = ["Arsenal", "Brentford", "Manchester City", "Liverpool", "Chelsea", "Manchester United", "West Ham", "Arsenal", "Wolves", "Tottenham", "Brighton & Hove Albion", "Southhampton", "Leicester City", "Aston Villa", "Crystal Palace", "Leeds United", "Everton", "Newcastle United", "Norwich City", "Watford", "Burnley"];
+const prem = ["Arsenal", "Brentford", "Manchester City", "Liverpool", "Chelsea", "Manchester United", "West Ham", "Arsenal", "Wolves", "Tottenham", "Brighton & Hove Albion", "Fulham", "Leicester City", "Aston Villa", "Crystal Palace", "Leeds United", "Everton", "Newcastle United", "Norwich City", "Watford", "Burnley"];
 
 const bundes = ["Bayern Munich", "Borussia Dortmund", "Bayer Leverkusen", "RB Leipzig", "Hoffenheim", "SC Freiburg","1. FC Union Berlin","1. FC Koln","1. FSV Mainz 05","Frankfurt","Vfl Bochum","Vfl Wolfsburg","M'Gladbach","Hertha BSC","Arminia Bielefeld","Augsburg","VfB Stuttgart","SpVgg G. Furth"];
 
@@ -267,7 +267,7 @@ playerAnswers["3/27/2023"] = "Ousmane Dembele"
 playerAnswers["3/28/2023"] = "Filip Kostic"
 playerAnswers["3/29/2023"] = "Heung Min Son"
 playerAnswers["3/30/2023"] = "Sergio Ramos"
-playerAnswers["9/21/2023"] = "Sergio Ramos"
+playerAnswers["9/21/2023"] = "Bremer"
 
 var randomPlayer = ""
 const today = new Date()
