@@ -70,7 +70,7 @@
 
   #popup {
     width: 70vw;
-    left: 50vw;
+    left: 12.5vw;
   }
     
   #iconDiv {
@@ -646,7 +646,7 @@ th {
 #popup {
   top: 0vh;
   height: auto;
-  padding: 10px;
+  padding: 1.5vw;
 }
 
 #inputBox {
