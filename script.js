@@ -72,6 +72,7 @@ const turkey = ["Fenerbahce"]
 
 const portugal = ["Benfica"]
 
+
 if (localStorage.getItem("guess") == null) {
   localStorage.setItem("guess",0)
 }
@@ -96,6 +97,8 @@ if (localStorage.getItem("player5") == null) {
 if (localStorage.getItem("player6") == null) {
   localStorage.setItem("player6","Player 6")
 }
+
+
 
 
 statsOpen = false
@@ -147,21 +150,43 @@ createBoxes("ratingRect")
 createBoxes("positionRect")
 
 function createBoxes(rectName) {
-  for(var rectNum = 1; rectNum < 7; rectNum++) {
-    var items = localStorage.getItem(rectName+rectNum).split(",")
-    var rect = document.getElementById(rectName+rectNum)
-    rect.style.backgroundColor = items[1]+","+items[2]+","+items[3]
-    if(items[0] != "") {
-      createText(items[0],rect)
-    } else {
-      rect.style.backgroundColor = "rgb(143, 141, 141)"
+  if (gameMode != "unlimited") {
+    for(var rectNum = 1; rectNum < 7; rectNum++) {
+      var items = localStorage.getItem(rectName+rectNum).split(",")
+      console.log(items)
+      var rect = document.getElementById(rectName+rectNum)
+      rect.style.backgroundColor = items[1]+","+items[2]+","+items[3]
+      if(items[0] != "") {
+        createText(items[0],rect)
+      } else {
+        rect.style.backgroundColor = "rgb(143, 141, 141)"
+      }
     }
+  } else {
+    for(var rectNum = 1; rectNum < 7; rectNum++) {
+      var rect = document.getElementById(rectName+rectNum)
+      console.log(rect.id)
+      rect.style.backgroundColor = "rgb(143, 141, 141)"
+      try {
+        console.log("here")
+        rect.innerHTML = ""
+        rect.style.display = "table"
+        rect.style.animation = ""
+      }
+      catch {
+      }
+    }
+    
   }
 }
 
 night = 0
 
 resetAtMidnight()
+
+document.addEventListener("click",function(evt){
+  console.log(evt.target.id)
+})
 
 function resetAtMidnight() {
     var now = new Date();
@@ -177,12 +202,8 @@ function resetAtMidnight() {
       resetAtMidnight();
     }, msToMidnight);
 };
+//reset()
 function reset() {
-  resetRects("teamRect")
-  resetRects("countryRect")
-  resetRects("ratingRect")
-  resetRects("positionRect")
-  resetRects("numberRect")
   localStorage.setItem("guess",0)
   localStorage.setItem("gameOver","none")
   localStorage.setItem("player1","Player 1")
@@ -192,7 +213,38 @@ function reset() {
   localStorage.setItem("player5","Player 5")
   localStorage.setItem("player6","Player 6")
   localStorage.setItem("date", new Date().getSeconds())
+  resetRects("teamRect")
+  resetRects("countryRect")
+  resetRects("positionRect")
+  resetRects("ratingRect")
+  resetRects("numberRect")
   window.location.reload();
+}
+unlimitedGuess=0
+function unlimitedReset() {
+  createBoxes("teamRect")
+  createBoxes("countryRect")
+  createBoxes("numberRect")
+  createBoxes("ratingRect")
+  createBoxes("positionRect")
+  unlimitedGuess=0
+  unlimitedGameOver = "none"
+  document.getElementById("player1").innerHTML = "Player 1"
+  document.getElementById("player2").innerHTML = "Player 2"
+  document.getElementById("player3").innerHTML = "Player 3"
+  document.getElementById("player4").innerHTML = "Player 4"
+  document.getElementById("player5").innerHTML = "Player 5"
+  document.getElementById("player6").innerHTML = "Player 6"
+  randomPlayerName = players[Math.floor(Math.random()*players.length-1)].name
+  console.log(randomPlayerName)
+  for (player of players) {
+    if (player.name == randomPlayerName) {
+      randomPlayer = player
+      break
+    }
+  }
+  determineContinent()
+  determineLeague()
 }
 
 
@@ -220,7 +272,7 @@ function updateTime() {
   if (seconds == 0) {
     seconds = "00"
   }
-  time.innerHTML = "Next Footble:\n"+hours + ":" + minutes +  ":" + seconds
+  time.innerHTML = "Next Daily Footble:\n"+hours + ":" + minutes +  ":" + seconds
 }
 
 function resetRects(rectName) {
@@ -268,7 +320,11 @@ document.getElementById("statsDiv").addEventListener("click",function(){
       statsOpen = false
     } else {
       document.getElementById("stats").className="fa-solid fa-x"
-      showWinOrLose(localStorage.getItem("gameOver"))
+      if (gameMode != "unlimited") {
+        showWinOrLose(localStorage.getItem("gameOver"))
+      } else {
+        showWinOrLose(unlimitedGameOver)
+      }
       statsOpen = true
     }
   }
@@ -301,14 +357,64 @@ document.getElementById("iconDiv").addEventListener("click",function(){
   }
 })
 
+var gameMode = "daily"
+newPlayerDiv = document.getElementById("newPlayerDiv")
+newPlayer = document.getElementById("newPlayer")
+newPlayerDiv.parentNode.removeChild(newPlayerDiv)
 
+document.getElementById("gameModeText").addEventListener("click",function(){
+  if (finished){  
+    if (gameMode == "daily") {
+      gameMode = "unlimited"
+      unlimitedReset()
+      document.getElementById("gameModeText").innerHTML = "Play Daily"
+      document.getElementById("guessHolder").appendChild(newPlayerDiv)
+    } else {
+      createBoxes("teamRect")
+      createBoxes("countryRect")
+      createBoxes("numberRect")
+      createBoxes("ratingRect")
+      createBoxes("positionRect")
+      gameMode = "daily"
+      document.getElementById("gameModeText").innerHTML = "Play Unlimited"
+      newPlayerDiv.parentNode.removeChild(newPlayerDiv)
+      createBoxes("teamRect")
+      createBoxes("countryRect")
+      createBoxes("numberRect")
+      createBoxes("ratingRect")
+      createBoxes("positionRect")
+      document.getElementById("player1").innerHTML = localStorage.getItem("player1")
+      document.getElementById("player2").innerHTML = localStorage.getItem("player2")
+      document.getElementById("player3").innerHTML = localStorage.getItem("player3")
+      document.getElementById("player4").innerHTML = localStorage.getItem("player4")
+      document.getElementById("player5").innerHTML = localStorage.getItem("player5")
+      document.getElementById("player6").innerHTML = localStorage.getItem("player6")
+      randomPlayerName = playerAnswers[date]
+      for (player of players) {
+        if (player.name == randomPlayerName) {
+          randomPlayer = player
+          break
+        }
+      }
+      determineContinent()
+      determineLeague()
+    }
+  }
+})
+
+newPlayer.addEventListener("click",function(){
+  unlimitedReset()
+})
 
 function showWinOrLose(popup) {
   element.style.visibility = "visible";
   if (popup != "none" && popup != null) {
-    reveal.innerHTML = "The player was " + randomPlayer.name + "!"
+    console.log(randomPlayerName)
+    reveal.innerHTML = "The player was " + randomPlayerName + "!"
     element.appendChild(reveal)
-    element.appendChild(message)
+    if (gameMode != "unlimited") {
+      element.appendChild(message)
+    }
     element.appendChild(time)
     if (popup == "win") {
       winLoseTitle.innerHTML = "You Win!"
@@ -316,10 +422,10 @@ function showWinOrLose(popup) {
       winLoseTitle.innerHTML = "You Lose"
     }
   } else {
-    if (guess == 0) {
-      winLoseTitle.innerHTML = "You Haven't Played Yet Today!"
+    if (guess == 0 && gameMode != "unlimited" || unlimitedGuess == 0 && gameMode == "unlimited") {
+      winLoseTitle.innerHTML = "You Haven't Played Yet!"
     } else {
-      winLoseTitle.innerHTML = "You Haven't Finished Yet Today!"
+      winLoseTitle.innerHTML = "You Haven't Finished Yet!"
     }
   }
   element.appendChild(share)
@@ -330,11 +436,13 @@ function showWinOrLose(popup) {
   setTimeout(function() {
     document.body.addEventListener("click", hideStats);
   }, delayInMilliseconds);
-  saveBoxes("teamRect")
-  saveBoxes("countryRect")
-  saveBoxes("numberRect")
-  saveBoxes("ratingRect")
-  saveBoxes("positionRect")
+  if (gameMode != "unlimited") {
+    saveBoxes("teamRect")
+    saveBoxes("countryRect")
+    saveBoxes("numberRect")
+    saveBoxes("ratingRect")
+    saveBoxes("positionRect")
+  }
 }
 
 hideStats = function(evt) {
@@ -431,27 +539,39 @@ function showMainScreen() {
 }
 
 showingIncorrect = false
+unlimitedGameOver = "none"
 
 guessButton.addEventListener("click",function() {
-  
   if (finished) {
     finished = false
-    if (gameOver == "none") {
-      if (guess <= 6) {
+    console.log("lo")
+    if (gameOver == "none" && gameMode != "unlimited" || unlimitedGameOver == "none" && gameMode == "unlimited") {
+      console.log("here")
+      if (guess <= 6 && gameMode != "unlimited" || (gameMode == "unlimited" && unlimitedGuess <= 6)) {
+        console.log("o")
         const playerName = inputBox.value
         var delayInMilliseconds = 3600;
         setTimeout(function() {
           if (randomPlayer.name == playerName) {
             showWinOrLose("win")
-            gameOver = "win"
-            localStorage.setItem("gameOver",gameOver)
+            if (gameMode != "unlimited") {
+              gameOver = "win"
+              localStorage.setItem("gameOver",gameOver)
+            } else {
+              unlimitedGameOver = "win"
+            }
           } 
-          else if (guess == 6) {
+          else if (guess == 6 && gameMode != "unlimited" || unlimitedGuess == 6 && gameMode == "unlimited") {
             showWinOrLose("lose")
-            gameOver = "lose"
-            localStorage.setItem("gameOver",gameOver)
+            if (gameMode != "unlimited") {
+              gameOver = "lose"
+              localStorage.setItem("gameOver",gameOver)
+            } else {
+              unlimitedGameOver = "lose"
+            }
           }
         }, delayInMilliseconds);
+
       }
       var found = false;
       var guessedPlayer;
@@ -468,10 +588,16 @@ guessButton.addEventListener("click",function() {
           left: 0, 
           behavior: 'smooth' 
         });
-        guess+=1;
-        localStorage.setItem("guess",guess)
-        document.getElementById("player"+guess).innerHTML = guessedPlayer.name;
-        localStorage.setItem("player"+guess,guessedPlayer.name)
+        if (gameMode != "unlimited") {
+          guess+=1;
+          localStorage.setItem("guess",guess)
+          document.getElementById("player"+guess).innerHTML = guessedPlayer.name;
+          localStorage.setItem("player"+guess,guessedPlayer.name)
+        } else {
+          unlimitedGuess += 1
+          document.getElementById("player"+unlimitedGuess).innerHTML = guessedPlayer.name;
+        }
+
         compareData(guessedPlayer)
         inputBox.value = ""
       } else {
@@ -493,13 +619,13 @@ guessButton.addEventListener("click",function() {
       if (!showingIncorrect) {
         showingIncorrect = true
         const incorrect = document.createElement("p")
-        incorrect.innerHTML = "You have already played for today."
-        incorrect.id = "incorrect"
-        document.getElementById("guessHolder").appendChild(incorrect)
-        setTimeout( function() {
+        if (gameOver != "unlimited") {
+          incorrect.innerHTML = "You have already played for today."
+          incorrect.id = "incorrect"
+          document.getElementById("guessHolder").appendChild(incorrect)
           incorrect.parentNode.removeChild(incorrect)
           showingIncorrect = false
-        }, 3000)
+        }
       }
     }
   }
@@ -537,13 +663,17 @@ function compareData(player) {
   }, delayInMilliseconds);
 
   setTimeout(function() {
-    saveBoxes("teamRect")
-    saveBoxes("countryRect")
-    saveBoxes("numberRect")
-    saveBoxes("ratingRect")
-    saveBoxes("positionRect")
+    if (gameMode != "unlimited") {
+      saveBoxes("teamRect")
+      saveBoxes("countryRect")
+      saveBoxes("numberRect")
+      saveBoxes("ratingRect")
+      saveBoxes("positionRect")
+    }
     finished = true
   }, 3600)
+
+
 }
 
 function createText(text,rect) {
@@ -553,10 +683,15 @@ function createText(text,rect) {
   textBox.id = "boxText"
 }
 
-const rotateBox = "rotateBox 1.5s ease forwards"
+var rotateBox = "rotateBox 1.5s ease forwards"
 
 function comparePosition(yourPosition) {
-  const rect = document.getElementById("positionRect"+guess)
+  if (gameMode != "unlimited") {
+    var rect = document.getElementById("positionRect"+guess)
+  } else {
+    var rect = document.getElementById("positionRect"+unlimitedGuess)
+  }
+  console.log("rotatung?")
   rect.style.animation = rotateBox
   setTimeout(function() {
     if (yourPosition == randomPlayer.position) {
@@ -571,7 +706,12 @@ function comparePosition(yourPosition) {
 
 function compareRating(yourRating) {
   difference = (Math.abs(yourRating-randomPlayer.rating));
-  const rect = document.getElementById("ratingRect"+guess)
+  if (gameMode != "unlimited") { 
+    var rect = document.getElementById("ratingRect"+guess)
+  } else {
+    var rect = document.getElementById("ratingRect"+unlimitedGuess)
+  }
+  
   rect.style.animation = rotateBox
   setTimeout(function() {
     if (difference == 0) {
@@ -595,7 +735,11 @@ function compareRating(yourRating) {
 
 function compareNumber(yourNumber) {
   difference = (Math.abs(yourNumber-randomPlayer.number));
-  const rect = document.getElementById("numberRect"+guess)
+  if (gameMode != "unlimited") {
+    var rect = document.getElementById("numberRect"+guess)
+  } else {
+    var rect = document.getElementById("numberRect"+unlimitedGuess)
+  }
   rect.style.animation = rotateBox
   setTimeout(function() {
     if (yourNumber == randomPlayer.number) {
@@ -618,7 +762,11 @@ function compareNumber(yourNumber) {
 }
 
 function compareCountry(yourCountry) {
-  const rect = document.getElementById("countryRect"+guess)
+  if (gameMode != "unlimited") {
+    var rect = document.getElementById("countryRect"+guess)
+  } else {
+    var rect = document.getElementById("countryRect"+unlimitedGuess)
+  }
   rect.style.animation = rotateBox
   setTimeout(function() {
     if (yourCountry == randomPlayer.country) {
@@ -690,8 +838,14 @@ function compareCountry(yourCountry) {
 }
 
 function compareTeam(yourTeam) {
-  const rect = document.getElementById("teamRect"+guess)
+  if (gameMode != "unlimited") {
+    var rect = document.getElementById("teamRect"+guess)
+  } else {
+    var rect = document.getElementById("teamRect"+unlimitedGuess)
+  }
   rect.style.animation = rotateBox
+  console.log(yourTeam)
+  console.log(randomPlayer.team)
   setTimeout(function() {
     if (yourTeam == randomPlayer.team) {
       rect.style.backgroundColor = green;
@@ -880,10 +1034,17 @@ function digits_count(n) {
 
 function createShareText() {
   var text = ""
-  var today = new Date()
-  var date = today.getMonth()+1 + "/" + today.getDate()
-  text += "Footble, "+date+"\n"
-  for (let i = 1; i < guess+1; i++) {
+  range = 0
+  if (gameMode != "unlimited") {
+    var today = new Date()
+    var date = today.getMonth()+1 + "/" + today.getDate()
+    text += "Footble, "+date+"\n"
+    range = guess
+  } else {
+    text += "Unlimited, "+randomPlayerName+"\n"
+    range = unlimitedGuess
+  }
+  for (let i = 1; i < range+1; i++) {
     text += getEmoji(document.getElementById("teamRect"+i))
     text += getEmoji(document.getElementById("countryRect"+i))
     text += getEmoji(document.getElementById("numberRect"+i))
@@ -896,7 +1057,7 @@ function createShareText() {
 }
 
 function getEmoji(rect) {
-  const backgroundColor = rect.style.backgroundColor
+  var backgroundColor = rect.style.backgroundColor
   if (backgroundColor == green) {
     return "🟩"
   } else if (backgroundColor == yellow) {

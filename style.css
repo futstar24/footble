@@ -165,7 +165,6 @@
   #guessHolder {
     margin-top: 10px;
     height: 4.5vh;
-    margin-bottom: 10px;
   }
 }
  
@@ -331,7 +330,6 @@
   }
   #guessHolder {
     margin-top: 10px;
-    margin-bottom: 2vh;
     padding-right: 1.9vw;
   }
   #coffee {
@@ -429,11 +427,28 @@
   font-family: "Arial";
 }
 
+#newPlayerDiv {
+  position: relative;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: -15px;
+}
 
+#newPlayerSpan {
+  background-color: rgba(159,249,176,1);
+  color: black;
+  font-family: "Gill Sans";
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  line-height: 0px;
+  font-size: 20px;
+}
 
 .rect {
   background-color: white;
-  
   margin: auto;
   display: table;
 }
@@ -482,7 +497,7 @@
 }
 
 #boxText {
-  font-family: Marker Felt;
+  font-family: "Marker Felt";
   text-align: center;
   width: 100%;
   display: table-cell;
@@ -524,11 +539,33 @@ th {
 }
 #linkDiv {
   position: relative;
-  width: 163px;
+  width: 176px;
   margin: auto;
+  padding: 0;
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
+#gameModeButton {
+  position: relative;
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 2px;
+  font-size: 30px;
+}
+
+#gameModeText {
+  text-align: center;
+  font-family: "Geneva";
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  color: rgba(159,249,176,1);
+}
+
 #license {
   font-size: 2.5vh;
   margin-top: 0px;
@@ -574,6 +611,7 @@ th {
   top: 0vh;
   height: auto;
   left: 50vw;
+  padding: 10px;
 }
 
 #inputBox {
@@ -613,13 +651,15 @@ th {
   position: relative;
   width: 163px;
   margin: auto;
+  padding: 0;
   margin-bottom: 0px;
 }
 
 #coffee {
   position: relative;
   display: table;
-  margin: 0 auto;
+  margin: auto;
+  padding: 0;
   margin-bottom: 8px;
 }
 
