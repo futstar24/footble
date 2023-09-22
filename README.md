@@ -10,7 +10,7 @@ James Dibenedetto, Brandon Berkoff, Max Lamberg, Mateo DeLeòn
 
 MIT License
 
-Copyright (c) 2022 Jack Lamberg
+Copyright (c) 2023 Jack Lamberg
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
