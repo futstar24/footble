@@ -123,6 +123,7 @@ const playerAnswers = {}
 
 playerAnswers["9/21/2023"] = "Bremer"
 playerAnswers["9/22/2023"] = "Erling Haaland"
+playerAnswers["9/23/2023"] = "Sergio Busquets"
 
 var randomPlayer = ""
 const today = new Date()
