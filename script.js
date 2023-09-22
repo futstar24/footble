@@ -7,12 +7,15 @@ var guess = parseInt(localStorage.getItem("guess"));
 const element = document.getElementById("popup")
 const reveal = document.getElementById("reveal")
 const message = document.getElementById("message")
+const unlimitedMessage = document.getElementById("unlimitedSpan")
 const time = document.getElementById("time")
 const share = document.getElementById("share")
 const winLoseTitle = document.getElementById("winLoseTitle")
 const copy = document.getElementById("copy")
 const shareButton = document.getElementById("shareButton")
 const copyButton = document.getElementById("copyButton")
+
+unlimitedMessage.addEventListener("click",toggleGameMode)
 
 removePopupElements()
 
@@ -24,6 +27,11 @@ function removePopupElements() {
   }
   try {
     message.parentNode.removeChild(message)
+  } catch {
+
+  }
+  try {
+    unlimitedMessage.parentNode.removeChild(unlimitedMessage)
   } catch {
 
   }
@@ -362,7 +370,20 @@ newPlayerDiv = document.getElementById("newPlayerDiv")
 newPlayer = document.getElementById("newPlayer")
 newPlayerDiv.parentNode.removeChild(newPlayerDiv)
 
-document.getElementById("gameModeText").addEventListener("click",function(){
+document.getElementById("gameModeText").addEventListener("click",toggleGameMode)
+
+function toggleGameMode(evt) {
+  if (evt.target.id == "unlimitedSpan") {
+    gameMode = "daily"
+    document.getElementById("stats").className="fa-solid fa-square-poll-vertical"
+    element.style.animation = "hide 1s ease forwards"
+    statsStillClosing = true;
+    setTimeout(function() {
+      removePopupElements()
+      statsStillClosing = false
+    }, 1000)
+    statsOpen = false
+  }
   if (finished){  
     if (gameMode == "daily") {
       gameMode = "unlimited"
@@ -400,7 +421,7 @@ document.getElementById("gameModeText").addEventListener("click",function(){
       determineLeague()
     }
   }
-})
+}
 
 newPlayer.addEventListener("click",function(){
   unlimitedReset()
@@ -415,6 +436,7 @@ function showWinOrLose(popup) {
     if (gameMode != "unlimited") {
       element.appendChild(message)
     }
+    element.appendChild(unlimitedMessage)
     element.appendChild(time)
     if (popup == "win") {
       winLoseTitle.innerHTML = "You Win!"

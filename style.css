@@ -34,6 +34,9 @@
   #guessButton {
     font-size: 4vw;
   }
+  #newPlayerDiv {
+    font-size: 4vw;
+  }
   #incorrect {
     font-size: 4vw;
   }
@@ -91,6 +94,10 @@
     font-size: 4vw;
   }
   #message {
+    font-size: 4vw;
+    padding-bottom: 10px;
+  }
+  #unlimitedSpan {
     font-size: 4vw;
     padding-bottom: 10px;
   }
@@ -272,6 +279,10 @@
     font-size: 2vw;
     padding-bottom: 10px;
   }
+  #unlimitedSpan {
+    font-size: 2vw;
+    padding-bottom: 10px;
+  }
   #time {
     font-size: 2vw;
     padding-bottom: 10px;
@@ -318,6 +329,9 @@
   #guessButton {
     font-size: 2vw;
   }
+  #newPlayerDiv {
+    font-size: 2vw;
+  }
   #incorrect {
     font-size: 2vw;
   }
@@ -330,7 +344,6 @@
   }
   #guessHolder {
     margin-top: 10px;
-    padding-right: 1.9vw;
   }
   #coffee {
     padding-left: 1.2vw;
@@ -370,10 +383,20 @@
 
 #winLoseTitle {
   font-family: "Rockwell";
+  margin-bottom: -10%;
 }
 
 #message {
   font-family: "Monaco";
+}
+
+#unlimitedSpan {
+  background-color: rgb(79, 78, 76);
+  width: auto;
+  border-radius: 7px;
+  padding: 5px;
+  font-family: "Monaco";
+  text-align: center;
 }
 
 #time {
@@ -403,6 +426,9 @@
   z-index: 1;
   position: absolute;
   visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border-radius: 20px;
   background-color: rgb(41, 41, 41);
 }
@@ -430,9 +456,9 @@
 #newPlayerDiv {
   position: relative;
   display: flex;
+  width: 100%;
   flex-direction: horizontal;
   justify-content: center;
-  margin: 0;
   margin-bottom: -15px;
 }
 
@@ -441,10 +467,9 @@
   color: black;
   font-family: "Gill Sans";
   text-align: center;
-  margin: 0px;
+  margin: auto;
   padding: 0px;
   line-height: 0px;
-  font-size: 20px;
 }
 
 .rect {
