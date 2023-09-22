@@ -176,7 +176,6 @@ function createBoxes(rectName) {
   if (gameMode != "unlimited") {
     for(var rectNum = 1; rectNum < 7; rectNum++) {
       var items = localStorage.getItem(rectName+rectNum).split(",")
-      console.log(items)
       var rect = document.getElementById(rectName+rectNum)
       rect.style.backgroundColor = items[1]+","+items[2]+","+items[3]
       if(items[0] != "") {
@@ -188,10 +187,8 @@ function createBoxes(rectName) {
   } else {
     for(var rectNum = 1; rectNum < 7; rectNum++) {
       var rect = document.getElementById(rectName+rectNum)
-      console.log(rect.id)
       rect.style.backgroundColor = "rgb(143, 141, 141)"
       try {
-        console.log("here")
         rect.innerHTML = ""
         rect.style.display = "table"
         rect.style.animation = ""
@@ -206,10 +203,6 @@ function createBoxes(rectName) {
 night = 0
 
 resetAtMidnight()
-
-document.addEventListener("click",function(evt){
-  console.log(evt.target.id)
-})
 
 function resetAtMidnight() {
     var now = new Date();
@@ -259,7 +252,6 @@ function unlimitedReset() {
   document.getElementById("player5").innerHTML = "Player 5"
   document.getElementById("player6").innerHTML = "Player 6"
   randomPlayerName = players[Math.floor(Math.random()*players.length-1)].name
-  console.log(randomPlayerName)
   for (player of players) {
     if (player.name == randomPlayerName) {
       randomPlayer = player
@@ -445,7 +437,6 @@ newPlayer.addEventListener("click",function(){
 function showWinOrLose(popup) {
   element.style.visibility = "visible";
   if (popup != "none" && popup != null) {
-    console.log(randomPlayerName)
     reveal.innerHTML = "The player was " + randomPlayerName + "!"
     element.appendChild(reveal)
     if (gameMode != "unlimited") {
@@ -592,11 +583,8 @@ unlimitedGameOver = "none"
 guessButton.addEventListener("click",function() {
   if (finished) {
     finished = false
-    console.log("lo")
     if (gameOver == "none" && gameMode != "unlimited" || unlimitedGameOver == "none" && gameMode == "unlimited") {
-      console.log("here")
       if (guess <= 6 && gameMode != "unlimited" || (gameMode == "unlimited" && unlimitedGuess <= 6)) {
-        console.log("o")
         const playerName = inputBox.value
         var delayInMilliseconds = 3600;
         setTimeout(function() {
@@ -749,7 +737,6 @@ function comparePosition(yourPosition) {
   } else {
     var rect = document.getElementById("positionRect"+unlimitedGuess)
   }
-  console.log("rotatung?")
   rect.style.animation = rotateBox
   setTimeout(function() {
     if (yourPosition == randomPlayer.position) {
@@ -902,8 +889,6 @@ function compareTeam(yourTeam) {
     var rect = document.getElementById("teamRect"+unlimitedGuess)
   }
   rect.style.animation = rotateBox
-  console.log(yourTeam)
-  console.log(randomPlayer.team)
   setTimeout(function() {
     if (yourTeam == randomPlayer.team) {
       rect.style.backgroundColor = green;
