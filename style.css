@@ -536,6 +536,7 @@
 
 #boxText {
   font-family: "Marker Felt";
+  -webkit-text-stroke: 0.75px black;
   text-align: center;
   width: 100%;
   display: table-cell;
