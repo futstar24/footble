@@ -97,6 +97,10 @@
     font-size: 4vw;
     padding-bottom: 10px;
   }
+  #streak {
+    font-size: 4vw;
+    padding-bottom: 10px;
+  }
   #unlimitedSpan {
     font-size: 4vw;
     padding-bottom: 10px;
@@ -279,6 +283,11 @@
     font-size: 2vw;
     padding-bottom: 10px;
   }
+
+  #streak {
+    font-size: 2vw;
+    padding-bottom: 10px;
+  }
   #unlimitedSpan {
     font-size: 2vw;
     padding-bottom: 10px;
@@ -389,12 +398,16 @@
 #message {
   font-family: "Monaco";
 }
+#streak {
+  font-family: "Monaco";
+}
 
 #unlimitedSpan {
   background-color: rgb(79, 78, 76);
   width: auto;
   border-radius: 7px;
   padding: 5px;
+  margin-top: 5px;
   font-family: "Monaco";
   text-align: center;
 }

@@ -7,6 +7,7 @@ var guess = parseInt(localStorage.getItem("guess"));
 const element = document.getElementById("popup")
 const reveal = document.getElementById("reveal")
 const message = document.getElementById("message")
+const streak = document.getElementById("streak")
 const unlimitedMessage = document.getElementById("unlimitedSpan")
 const time = document.getElementById("time")
 const share = document.getElementById("share")
@@ -27,6 +28,11 @@ function removePopupElements() {
   }
   try {
     message.parentNode.removeChild(message)
+  } catch {
+
+  }
+  try {
+    streak.parentNode.removeChild(streak)
   } catch {
 
   }
@@ -81,6 +87,12 @@ const turkey = ["Fenerbahce"]
 const portugal = ["Benfica"]
 
 
+if (localStorage.getItem("dailyStreak") == null) {
+  localStorage.setItem("dailyStreak",0)
+}
+if (localStorage.getItem("unlimitedStreak") == null) {
+  localStorage.setItem("unlimitedStreak",0)
+}
 if (localStorage.getItem("guess") == null) {
   localStorage.setItem("guess",0)
 }
@@ -111,6 +123,8 @@ if (localStorage.getItem("player6") == null) {
 
 statsOpen = false
 var gameOver = (localStorage.getItem("gameOver"))
+var dailyStreak = parseInt(localStorage.getItem("dailyStreak"))
+var unlimitedStreak = parseInt(localStorage.getItem("unlimitedStreak"))
 //reset()
 document.getElementById("player1").innerHTML = localStorage.getItem("player1")
 document.getElementById("player2").innerHTML = localStorage.getItem("player2")
@@ -436,7 +450,12 @@ function showWinOrLose(popup) {
     element.appendChild(reveal)
     if (gameMode != "unlimited") {
       element.appendChild(message)
+      streak.innerHTML = "Daily Streak: " + dailyStreak
+    } else {
+      streak.innerHTML = "Unlimited Streak: " + unlimitedStreak
     }
+
+    element.appendChild(streak)
     element.appendChild(unlimitedMessage)
     element.appendChild(time)
     if (popup == "win") {
@@ -445,12 +464,18 @@ function showWinOrLose(popup) {
       winLoseTitle.innerHTML = "You Lose"
     }
   } else {
+    if (gameMode != "unlimited") {
+      streak.innerHTML = "Daily Streak: " + dailyStreak
+    } else {
+      streak.innerHTML = "Unlimited Streak: " + unlimitedStreak
+    }
+    element.appendChild(streak)
     if (guess == 0 && gameMode != "unlimited" || unlimitedGuess == 0 && gameMode == "unlimited") {
       winLoseTitle.innerHTML = "You Haven't Played Yet!"
     } else {
       winLoseTitle.innerHTML = "You Haven't Finished Yet!"
     }
-  }
+  } 
   element.appendChild(share)
   element.style.animation = "drop 0.5s ease forwards"
   document.getElementById("stats").className="fa-solid fa-x"
@@ -576,22 +601,32 @@ guessButton.addEventListener("click",function() {
         var delayInMilliseconds = 3600;
         setTimeout(function() {
           if (randomPlayer.name == playerName) {
-            showWinOrLose("win")
+            
             if (gameMode != "unlimited") {
               gameOver = "win"
               localStorage.setItem("gameOver",gameOver)
+              dailyStreak += 1
+              localStorage.setItem("dailyStreak",dailyStreak)
             } else {
               unlimitedGameOver = "win"
+              unlimitedStreak+=1
+              localStorage.setItem("unlimitedStreak",unlimitedStreak)
             }
+            showWinOrLose("win")
           } 
           else if (guess == 6 && gameMode != "unlimited" || unlimitedGuess == 6 && gameMode == "unlimited") {
-            showWinOrLose("lose")
+            
             if (gameMode != "unlimited") {
               gameOver = "lose"
+              dailyStreak = 0
+              localStorage.setItem("dailyStreak",dailyStreak)
               localStorage.setItem("gameOver",gameOver)
             } else {
               unlimitedGameOver = "lose"
+              unlimitedStreak=0
+              localStorage.setItem("unlimitedStreak",unlimitedStreak)
             }
+            showWinOrLose("lose")
           }
         }, delayInMilliseconds);
 
@@ -1064,7 +1099,7 @@ function createShareText() {
     text += "Footble, "+date+"\n"
     range = guess
   } else {
-    text += "Unlimited, "+randomPlayerName+"\n"
+    text += "Unlimited Footble, "+randomPlayerName+"\n"
     range = unlimitedGuess
   }
   for (let i = 1; i < range+1; i++) {
