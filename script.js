@@ -140,6 +140,7 @@ playerAnswers["9/22/2023"] = "Erling Haaland"
 playerAnswers["9/23/2023"] = "Sergio Busquets"
 playerAnswers["9/24/2023"] = "Sadio Mane"
 playerAnswers["9/25/2023"] = "Bukayo Saka"
+playerAnswers["9/26/2023"] = "Bukayo Saka"
 
 var randomPlayer = ""
 const today = new Date()
